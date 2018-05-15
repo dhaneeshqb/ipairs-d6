@@ -1,0 +1,37 @@
+<?php
+
+function nyulmc_webform_redirect_perm() {
+		return array('access webform redirect' );
+}
+
+
+function nyulmc_webform_redirect_form_alter(&$form, &$form_state, $form_id) {
+		
+    if( $form_id == 'webform_client_form_67') {
+				 $form['#submit'][] = 'nyulmc_webform_redirect_submit_function';
+				 return $form;
+		}
+    
+}
+
+function nyulmc_webform_redirect_submit_function($form, &$form_values){
+		global $user;
+		if( $form_values['values']['submitted'][2] == 'yes' ){
+				//assign a role that allows to download files 
+				$form_values['redirect']   = 'node/72';
+				if( $user->uid != 1){
+						$myuser = module_invoke('user', 'load', $user->uid);
+						$myroles = $user->roles;
+						$myroles[6] = 'authenticated plus';
+						module_invoke('user', 'save', $myuser, array('roles' => $myroles, 'accepted_terms_conditions' => true));						
+				}
+		} else {				
+				if( $user->roles[6] ){
+						$myroles = $user->roles;						
+						unset($myroles[6]);
+						$myuser = module_invoke('user', 'load', $user->uid);
+						module_invoke('user', 'save', $myuser, array('roles' => $myroles, 'accepted_terms_conditions' => false ));
+				}						
+				$form_values['redirect']   = 'node/73';			
+		}		
+}

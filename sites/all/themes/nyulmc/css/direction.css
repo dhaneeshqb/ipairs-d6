@@ -1,0 +1,91 @@
+div.display-directions {
+ margin: 20px 0 0 0;
+ padding: 0;
+}
+
+div.display-directions h2.row-title {
+ border: 1px solid #ccc;
+ border-bottom: 1px solid #fff;
+ display: inline-block;
+ font: 13px/135% Arial,Helvetica,sans-serif;
+ height: 40px;
+ list-style: none outside none;
+ margin: 0 6px 0 0;
+ padding: 0;
+ text-align: center;
+ width: 180px;
+ z-index: 10;
+}
+
+div.display-directions h2.row-title a {
+ color: #333333;
+ display: block;
+ height: 40px;
+ line-height: 40px;
+ text-decoration: none;
+ width: 180px;
+}
+
+div.display-directions div#direction-tabs {
+ overflow: auto;
+ width: 100%;
+}
+
+div.display-directions div#direction-tabs h2.row-title {
+ background-color: #e1e1e1;
+ border-bottom: 1px solid #ccc;
+ float: left;
+}
+
+div.display-directions div#direction-tabs h2.row-title.selected {
+ background-color: #fff;
+ border-bottom: 1px solid #fff;
+}
+
+div.display-directions div.display-directions-body {
+ background-color: #FFFFFF;
+ border: 1px solid #CCCCCC;
+ margin: -1px 0 20px 0;
+ padding: 30px 20px;
+ z-index: 5;
+}
+
+div.bio_data_wrapper  div.bio_data_left, div.bio_data_wrapper  div.bio_data_right {
+ float: left;
+ display: inline;
+ width: 360px;
+}
+
+div.bio_data_wrapper div.bio_data_left.directions {
+ width: 450px;
+}
+
+div.bio_data_wrapper div.bio_data_right.directions {
+ width: 375px;
+}
+
+div.bio_data_wrapper div.bio_data_left {
+ margin-right: 75px;
+}
+
+div.bio_data_wrapper div.bio_data_left.directions {
+ margin-right: 25px;
+}
+
+div.bio_data_wrapper div.bio_data_right h3 {
+ color: #006666;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+div.bio_data_wrapper div.bio_data_right.directions h3 {
+ margin: 0 0 10px 0;
+}
+
+div.bio_data_wrapper div.bio_data_right.directions b {
+ color: #333;
+}
+
+div.bio_data_wrapper div.bio_data_right span {
+ margin: 0 0 20px 0;
+}

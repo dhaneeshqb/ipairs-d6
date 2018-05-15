@@ -1,0 +1,37 @@
+*{
+  color:#000 !important;
+  overflow:visible !important;
+}
+
+body { background-color: #ffffff !important; }
+
+#topnav, #admin-menu,  #footer, #trails, #utility, #column_left, #slider, #content_banner { display: none !important; }
+
+.wrapper, #column_main, #content_main { 
+	width: 100% !important;
+	background-color: #ffffff !important; 
+}
+
+#column_main {
+	margin-top: 20px !important;
+	margin-left: 20px !important;
+	/*
+	 * Oops, no background images in print stylesheets
+	 *
+	 
+	background-image: url(../images_layout/nyu_logo_print.jpg) !important;
+	background-repeat: no-repeat !important;
+	background-position: top left !important;
+	*/
+}
+
+#content_main {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#print-logo { 
+	display: block !important;
+	padding-left: 20px;
+	padding-top: 20px;
+}

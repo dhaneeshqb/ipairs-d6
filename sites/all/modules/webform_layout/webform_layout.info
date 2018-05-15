@@ -1,0 +1,14 @@
+; $Id: $
+name = Webform Layout
+description = Add a layout container type element to Webform.
+core = 6.x
+package = Webform
+
+dependencies[] = webform
+
+; Information added by drupal.org packaging script on 2012-07-28
+version = "6.x-1.0"
+core = "6.x"
+project = "webform_layout"
+datestamp = "1343437392"
+

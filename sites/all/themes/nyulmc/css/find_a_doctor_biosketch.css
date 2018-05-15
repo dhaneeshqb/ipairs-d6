@@ -1,0 +1,59 @@
+
+#biosketch_page { }
+
+.biosketch_container {padding: 0 0 2em;}
+.field_label {font-weight: bold;}
+
+.column_container {width: 100%; overflow: auto; margin: 1em 0;}
+
+.column_container #left_column {float:left; width: 300px; border: 1px solid #A3A3A3; padding: 1em;}
+.column_container #right_column {float: right; width: 250px;border: 1px solid #A3A3A3; padding: 1em;}
+
+#biosketch_tabs {
+	display: block;
+	position: relative;
+	margin: 20px 0 0 0;
+	*margin: 5px 0 0 0;
+	padding: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#biosketch_tabs li {
+	display: inline-block;
+	width: 148px;
+	margin: 0;
+	padding: 10px 20px;
+	list-style: none;
+	text-align: center;
+	border: 1px solid #CCC;
+	background-color: #E1E1E1;
+	z-index: 10;
+	zoom: 1;
+  *display: inline;
+
+}
+
+#biosketch_tabs a {
+	color: #333;
+	text-decoration: none;
+}
+
+#biosketch_tabs li.selected {
+	background-color: #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+#biosketch_data {
+	width: 919px;
+	margin: -1px 0 0 0;
+	padding: 10px;
+	*padding-top: 22px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	z-index: 5;
+}
+
+#biosketch_tabs .unselected { }
+#biosketch_data .unselected {display: none;}

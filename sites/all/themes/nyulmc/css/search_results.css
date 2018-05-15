@@ -1,0 +1,100 @@
+div.column_right.faculty_search b {
+	color: #333;
+}
+
+div.column_right.faculty_search #search {
+	margin: 10px 0 15px 0;
+}
+
+div.search_results {
+	width: 600px;
+	margin: 15px 0 0 0;
+}
+
+div.search_results div {
+	padding: 7px 0;
+}
+
+div.search_results div.border {
+	border-bottom: 1px solid #CCC;
+}
+
+div.search_results span {
+	display: block;
+}
+
+div.search_results span.results_number, div.search_results span.next {
+	float: left;
+	display: inline;
+}
+
+div.search_results span.results_time, div.search_results span.sort_by {
+	float: right;
+	display: inline;
+}
+
+div.search_results ul.search_results_list {
+	clear: both;
+	margin: 20px 0 0 0;
+}
+
+div.search_results ul.search_results_list li {
+	margin: 0 0 30px 0;
+	border-bottom: 1px solid #CCC;
+}
+
+div.search_results ul.search_results_list a.headline {
+	display: block;
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	color: #4A007E;
+}
+
+div.search_results ul.search_results_list span {
+	margin: 0 0 10px 0;
+}
+
+div#news div.search_results {
+	width: 244px;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #CCC;
+}
+
+div#news div.search_results span {
+	display: inline;
+}
+
+div#news span.faculty, div#news span.results {
+	margin: 0 0 0 15px;
+}
+
+div#news div.search_results ul {
+	width: 220px;
+	margin: 15px 0 0 20px;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #CCC;
+}
+
+div#news div.search_results ul li {
+	border-bottom: none;
+}
+
+/* People Search Results */
+
+div.people_search_left, div.people_search_right {
+	float: left;
+	display: inline;
+	width: 200px;
+}
+
+div.people_search_left {
+	margin: 0 15px 0 0;
+}
+
+ul.search_results_list li div.people_search_left ul li, ul.search_results_list li div.people_search_right ul li {
+	margin: 0 0 10px 0;
+	border: none;
+}
+
+body.node-type-page-search table#directory_container td { background-color: #f0efed; overflow:hidden; }
+body.node-type-page-search table#directory_container td.yellowpanel { background-color: #ffffff; }

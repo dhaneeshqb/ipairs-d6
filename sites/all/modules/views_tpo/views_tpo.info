@@ -1,0 +1,14 @@
+; $Id: views_tpo.info,v 1.2 2010/05/08 00:39:27 plach Exp $
+name = Views Term Path Override
+description = "Allows the Taxonomy Term argument to override taxonomy term paths."
+package = "Views"
+core = 6.x
+dependencies[] = views
+dependencies[] = taxonomy
+
+; Information added by drupal.org packaging script on 2010-06-28
+version = "6.x-1.0"
+core = "6.x"
+project = "views_tpo"
+datestamp = "1277721314"
+

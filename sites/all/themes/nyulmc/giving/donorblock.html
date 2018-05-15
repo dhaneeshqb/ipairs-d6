@@ -1,0 +1,61 @@
+<script type="text/javascript">
+
+$(document).ready(function() { 
+
+	$("#close").html("");
+	
+
+	$("#donatenow").mouseover(
+	  function () {
+		$("#sidelist").fadeIn(2000);
+		$("#close").fadeIn(2000);
+	  }
+	);
+	
+	$("#sidelist").mouseover(
+	  function () {
+		$(this).show();
+	  }
+	);
+
+	
+	
+	$('#close').click(
+		function () {
+			$('#sidelist').fadeOut(2000);
+			$("#close").fadeOut(2000);
+		  }
+	);
+
+});
+
+</script>
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td>
+				<div id="donatenow">
+					<img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/donatenow.jpg" /></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div id="close">X</div>
+<div id="sidelist" style="display: none;">
+	<table cellspacing="0" cellpadding="0" border="0">
+    		<td valign="top"><a href="http://giving.nyumc.org/sl-nyumc"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-nyulmc2.jpg" /></a></td>
+            <td valign="top"><a href="http://giving.nyumc.org/sl-alumni"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-alumni.jpg" /></a></td>	
+        	<td valign="top"><a href="http://giving.nyumc.org/sl-cancer"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-cancer.jpg" /></a></td>
+         	</tr>
+        <tr>
+        <td valign="top"><a href="http://giving.nyumc.org/sl-neuro"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-neuro.jpg" /></a></td>
+        	
+           <td valign="top"><a href="http://giving.nyumc.org/sl-cardio"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-cardio.jpg" /></a></td>
+        
+            <td valign="top"><a href="http://giving.nyumc.org/sl-hjd"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-hjd.jpg" /></a></td>
+        </tr>
+        <tr>	<td valign="top"><a href="http://giving.nyumc.org/sl-peds"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-peds.jpg" /></a></td>
+            <td valign="top"><a href="http://giving.nyumc.org/sl-cancer"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-nycfree.jpg" /></a></td>
+        	<td valign="top"><a href="http://giving.nyumc.org/sl-directed"><img border="0" src="http://development.webdev.nyumc.org/sites/default/files/giving2/dd-donor2.jpg" /></a></td>
+        </tr></table>
+</div>

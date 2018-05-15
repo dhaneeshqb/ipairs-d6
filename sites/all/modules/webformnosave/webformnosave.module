@@ -1,0 +1,67 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ *   Disable the storage of webforms in database
+ *
+ * @author: Sven Culley <contact@sense-design.de>
+ */
+
+/**
+ * Implementiert hook_menu
+ */
+function webformnosave_menu() {
+	$items = array();
+
+	$items['admin/settings/webformnosave'] = array(
+		'title' => 'Webform NoSave',
+    'description' => 'Disable the storage of webforms in database',
+    'page callback' => 'drupal_get_form',
+		'page arguments' => array('webformnosave_admin_settings'),
+		'access arguments' => array('administer webformnosave'),
+    'file' => 'webformnosave.admin.inc',
+	);
+
+	return $items;
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function webformnosave_perm() {
+  return array(
+    'administer webformnosave',
+  );
+}
+
+/**
+ * Implementiert hook_alter()
+ */
+function webformnosave_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+		case strstr($form_id, 'webform_client_form'):
+      if(variable_get('webformnosave', false)) {
+        $form['#submit'][] = 'webformnosave_delete_result';
+      }
+
+			break;
+	}
+}
+
+/**
+ *
+ */
+function webformnosave_delete_result($form, &$form_state) {
+  $sid = $form_state['values']['details']['sid'];
+  $new = $form_state['values']['details']['is_new'];
+  $nid = $form_state['values']['details']['nid'];
+
+  // Get excluded nids
+  $excluded = explode(',', variable_get('webformnosave_excluded', ''));
+
+  if($sid && $new && !in_array($nid, $excluded)) {
+    db_query("DELETE FROM {webform_submissions} WHERE sid = %d", $sid);
+    db_query("DELETE FROM {webform_submitted_data} WHERE sid = %d", $sid);
+  }
+}

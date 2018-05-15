@@ -1,0 +1,5 @@
+name = National Cancer Institute XML Processor
+description = For loading in XML and doing XSLT transformations with NCI data.
+core = 6.x
+version = "6.x-0.1"
+package = NYU

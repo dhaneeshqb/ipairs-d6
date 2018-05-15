@@ -1,0 +1,69 @@
+#rotator {
+ padding-bottom: 16px;
+}
+
+/* if you want to use the slider elsewhere, you need only define the width
+   here on these three elements */
+#rotator,
+#rotator .wrapper,
+#rotator li {
+  margin: 0 auto;
+  width: 270px !important;
+}
+#rotator-narrow,
+#rotator-narrow .wrapper,
+#rotator-narrow li {
+  margin: 0 auto;
+  width: 222px !important;
+}
+/* the remaining rules provide the visual style for any sort of slider */
+.slider {
+}
+.slider .wrapper {
+  overflow: hidden !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+.slider ul,
+div#content_main .slider ul.display-sidebar-slider-narrow {
+  list-style: none;
+  display: block;
+  width: 10000%;
+  margin: 0;
+  padding: 0;
+}
+#content #rotator-narrow div.wrapper { background-color: transparent; }
+
+.slider li {
+  list-style: none;
+  float: left;
+}
+.slider .arrow {
+  display: none;
+}
+.slider #thumbNav {
+  text-align: center;
+}
+.slider #thumbNav a {
+  text-indent: -999em;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  vertical-align: middle;
+  margin: 0 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.slider #thumbNav a.cur {
+  background: #666;
+}
+
+
+.slider #start-stop {
+
+  display: none;
+
+}
+

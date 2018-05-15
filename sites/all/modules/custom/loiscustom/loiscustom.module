@@ -1,0 +1,640 @@
+<?php
+
+
+function loiscustom_init() {
+	drupal_add_css(drupal_get_path('module', 'loiscustom') . '/loiscustom.css');
+	drupal_add_js(drupal_get_path('module', 'loiscustom') . '/loiscustom.js');  // handles a quirk in the form weights that prevents me from floating the instructions to the top.
+}
+
+
+function loiscustom_menu() {
+	$items['node/%/survey-cert'] = array(
+		'title' => 'Completion Certificate',
+		'page callback' => 'loiscustom_survey_cert',
+		'page arguments' => array(1),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+	
+	$items['node/%/survey-cert/printable'] = array(
+		'title' => 'Completion Certificate',
+		'page callback' => 'loiscustom_survey_cert_printable',
+		'page arguments' => array(1),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+	
+	$items['node/%/survey-cert/download'] = array(
+		'title' => 'Completion Certificate',
+		'page callback' => 'loiscustom_survey_cert_download',
+		'page arguments' => array(1),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+	
+	$items['node/%/results-page'] = array(
+		'title' => 'Results',
+		'page callback' => 'loiscustom_results_page',
+		'page arguments' => array(1),
+		'access callback' => 'loiscustom_check_access_results',
+		'access arguments' => array(1),
+		'type' => MENU_LOCAL_TASK,
+		'weight'=>4,
+	);
+	
+	$items['node/%/post-event-survey'] = array(
+		'title' => 'Post-Event Survey',
+		'page callback' => 'loiscustom_post_event_survey',
+		'page arguments' => array(1),
+		'access callback' => 'loiscustom_check_node_type_event',
+		'access arguments' => array(1),
+		'type' => MENU_LOCAL_TASK,
+		'weight'=>3,
+	);
+	
+	$items['node/%/original-event'] = array(
+		'title' => 'Back to Event',
+		'page callback' => 'loiscustom_original_event',
+		'page arguments' => array(1),
+		'access callback' => 'loiscustom_check_node_type_post',
+		'access arguments' => array(1),
+		'type' => MENU_LOCAL_TASK,
+		'weight'=>3,
+	);
+	
+	$items['node/%/loisform-results/graphs'] = array(
+		'title' => 'Result Graphs and Charts',
+		'page callback' => 'loiscustom_result_graph',
+		'page arguments' => array(1),
+		'access callback' => 'loiscustom_check_graphs',
+		'access arguments' => array(1),
+		'type' => MENU_LOCAL_TASK,
+		'weight'=>3,
+	);
+	
+	$items['loiscustom/viewnode/%'] = array(
+		'title' => 'Node Viewer',
+		'page callback' => 'loiscustom_viewnode',
+		'page arguments' => array(2),
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+	
+	return $items;
+}
+
+// access functions. Only show post survey tab on event page and vice versa.
+function loiscustom_check_node_type_event($nid) {
+	global $user;
+	$node = node_load($nid);
+	if ($node->type == 'calendar_event' && ($user->uid==$node->uid || in_array("super event user", $user->roles))) {
+		return true;	
+	}	
+	return false;
+}
+
+function loiscustom_check_node_type_post($nid) {
+	global $user;
+	$node = node_load($nid);
+	if ($node->type == 'post_event_info' && ($user->uid==$node->uid || in_array("super event user", $user->roles))) {
+		return true;	
+	}	
+	return false;
+}
+
+function loiscustom_check_graphs($nid) {
+	global $user;
+	$node = node_load($nid);
+	if (in_array("super event user", $user->roles)) {
+		return TRUE;
+	}
+	if (($node->type == 'calendar_event' || $node->type == 'post_event_info') && $user->uid==$node->uid) {
+		return true;	
+	}	
+	return false;
+}
+
+
+function loiscustom_check_access_results($nid) {
+	global $user;
+	$node = node_load($nid);
+	// allow superuser access to everything
+	if (in_array("super event user", $user->roles)) {
+		return TRUE;
+	}
+	if (($node->type == 'calendar_event' || $node->type == 'post_event_info') && $user->uid==$node->uid) {
+		return true;	
+	}	
+	return false;
+}
+
+
+// menu callbacks
+function loiscustom_survey_cert($nid) {
+	$node = node_load($nid);
+	//dpm($node);
+	$event_nid = _get_event_by_ref_id($node->field_post_ref_id[0]['value']);
+	$event_node = node_load($event_nid);
+	//dpm($event_nid);
+	//dpm($event_node);
+	$educational_units = isset($event_node->field_educational_units[0]) ? $event_node->field_educational_units[0]['value'] : 1;
+	if (!$_SESSION['cert_name']) {
+		return "Please complete the post-event survey in order to receive your completion certificate.";
+	}
+	$output = '';
+	$output .= '<div id="lois-cert"><div class="lois-cert-official">The NYU Association of Clinical Coordination and Research Management<br>This event is equivalent to ' . $educational_units . ' education unit(s).</div><br>';
+	$output .= '<div class="cert-title">' . $event_node->title . '</div>';
+	$cert_date = date("F j, Y g:ia", strtotime($event_node->field_start_date[0]['value']));
+	$output .= '<div>' . $cert_date . '</div>';
+	$output .= '<div class="cert-name">' . $_SESSION['cert_name'] . '</div>';
+	$output .= '<br><br>';
+	$dl_link = 'node/' . $nid . '/survey-cert/download';
+	$print_link = 'node/' . $nid . '/survey-cert/printable';
+	$output .= l('Click here for a printable version', $print_link);
+	$output .= '<br/>OR<br/>';
+	$output .= l('Click here to download a text version.', $dl_link);
+	$output .= '</div>';
+	//$output .= 'Click <a href="node/' . $nid . '/survey-cert/download">here</a> to download your completion certificate.';
+	return $output;
+}
+
+function loiscustom_survey_cert_printable($nid) {
+	$node = node_load($nid);
+	//dpm($node);
+	$event_nid = _get_event_by_ref_id($node->field_post_ref_id[0]['value']);
+	$event_node = node_load($event_nid);
+	//dpm($event_nid);
+	//dpm($event_node);
+	$educational_units = isset($event_node->field_educational_units[0]) ? $event_node->field_educational_units[0]['value'] : 1;
+	if (!$_SESSION['cert_name']) {
+		return "Please complete the post-event survey in order to receive your completion certificate.";
+	}
+	drupal_set_header('Content-Type: text/html');
+	$output = '<html><head>';
+	$output .= '<style>';
+	$output .= '#lois-cert { border: 1px solid black; padding: 5px; text-align: center; width: 700px; height: 200px; }
+.lois-cert-official { font-family: Helvetica Nue, "Trebuchet MS", Tahoma; font-size: 18px;  font-weight: bold; }
+.cert-title { font-style: italic; font-size: 16px; margin-bottom: 25px; } .cert-name { font-weight: bold; font-style: italic; }';
+	$output .= '</style>';
+	$output .= '</head><body>';
+	$output .= '<div id="lois-cert"><div class="lois-cert-official">The NYU Association of Clinical Coordination and Research Management<br>This event is equivalent to ' . $educational_units . ' education unit(s).</div><br>';
+	$output .= '<div class="cert-title">' . $event_node->title . '</div>';
+	$cert_date = date("F j, Y g:ia", strtotime($event_node->field_start_date[0]['value']));
+	$output .= '<div>' . $cert_date . '</div>';
+	$output .= '<div class="cert-name">' . $_SESSION['cert_name'] . '</div>';
+	$output .= '<br><br>';
+	$output .= '</div>';
+	$output .= '</body></html>';
+	//$output .= 'Click <a href="node/' . $nid . '/survey-cert/download">here</a> to download your completion certificate.';
+	print $output;
+}
+
+function loiscustom_survey_cert_download($nid) {
+	$node = node_load($nid);
+	//dpm($node);
+	$event_nid = _get_event_by_ref_id($node->field_post_ref_id[0]['value']);
+	$event_node = node_load($event_nid);
+	$educational_units = isset($event_node->field_educational_units[0]) ? $event_node->field_educational_units[0]['value'] : 1;
+	if (!$_SESSION['cert_name']) {
+		return "Please complete the post-event survey in order to receive your completion certificate.";
+	}
+	drupal_set_header('Content-Type: application/octet-stream');
+	drupal_set_header('Content-Disposition: attachment; filename="completion_cert.txt"');
+	$output = '';
+	$output .= "The NYU Association of Clinical Coordination and Research Management\r\nThis event is equivalent to $educational_units education unit(s).\r\n \r\n";
+	$output .= '- ' . $event_node->title . "\r\n\r\n";
+	$cert_date = date("F j, Y g:ia", strtotime($event_node->field_start_date[0]['value']));
+	$output .= '- ' . $cert_date . "\r\n\r\n";
+	$output .= $_SESSION['cert_name'];
+	print $output;
+}
+
+
+function loiscustom_results_page($nid) {
+	$node = node_load($nid);
+	//dpm($node);
+	// depending on which node page we're actually on, we need to get the related node differently.
+	if ($node->type == 'calendar_event') {
+		$post_event_nid = _get_post_event_by_ref_id($node->field_event_ref_id[0]['value']);
+		$output = '<ul class="survey-result-links"><li>' . l('Pre-event survey results', 'node/' . $node->nid . '/loisform-results') . '</li>';
+		$output .= '<li>' . l('Post-event survey results', 'node/' . $post_event_nid . '/loisform-results') . '</li>';
+		$output .= '</ul>';
+	}
+	elseif ($node->type == 'post_event_info') {
+		$event_nid = _get_event_by_ref_id($node->field_post_ref_id[0]['value']);
+		$output = '<ul class="survey-result-links"><li>' . l('Pre-event survey results', 'node/' . $event_nid . '/loisform-results') . '</li>';
+		$output .= '<li>' . l('Post-event survey results', 'node/' . $node->nid . '/loisform-results') . '</li>';
+		$output .= '</ul>';
+	}
+	return $output;
+}
+
+
+function loiscustom_event_survey($nid) {
+	return "Event survey form";
+}
+
+// figure out the post event survey & info node by linking the ref id, and send the user to it.
+function loiscustom_post_event_survey($nid) {
+	$node = node_load($nid);
+	$post_event_nid = _get_post_event_by_ref_id($node->field_event_ref_id[0]['value']); 
+	if ($post_event_nid) {
+		//drupal_goto("node/$post_event_nid/loisform");
+		drupal_goto("node/$post_event_nid");
+	}
+	else {
+		return "Error - no post event survey has been initialized.";	
+	}
+}
+
+// direct the user back to the original event node from the post-event one.
+function loiscustom_original_event($nid) {
+	$node = node_load($nid);
+	$event_nid = _get_event_by_ref_id($node->field_post_ref_id[0]['value']);
+	if ($event_nid) {
+		drupal_goto("node/$event_nid");
+	}
+	else {
+		return "Error - could not link back to event.";	
+	}
+}
+
+
+// get the results for the survey and make a Google chart out of it.
+function loiscustom_result_graph($nid) {
+	$node = node_load($nid);
+	$components = $node->loisform['components'];
+	$data = array();
+	$sids = array();
+	foreach ($components as $cid => $component) {
+		//print_r($component);
+		if ($component['type'] != 'select') { continue; }
+		// Do component specific call.
+		if ($row_data = loisform_component_invoke($component['type'], 'analysis', $component, $sids, FALSE)) {
+			$data[$cid] = $row_data;
+		}
+	}
+	
+	
+	// create the graph string
+	$graph_values = array();
+	$graph_names = array();
+	$graphs = array();
+	
+	foreach ($data as $question) {
+		$graph_values = array();
+		$graph_names = array();
+		foreach ($question as $answer) {
+			$graph_values[] = $answer[1];
+			$graph_names[] = $answer[0];
+		}
+		$gv = implode(',', $graph_values);
+		$gn = implode('|', $graph_names);
+		$graphs[] =  'http://chart.apis.google.com/chart?cht=p3&chs=250x100&chd=t:' . $gv . '&chl=' . $gn;
+	}
+	
+	//$graph_url = 'http://chart.apis.google.com/chart?cht=p3&chs=250x100&chd=t:1,2&chl=Red|Green';
+	//$graph_url = 'http://chart.apis.google.com/chart?cht=p3&chs=250x100&chd=t:' . $gv . '&chl=' . $gn;
+	$output = '';
+	foreach ($graphs as $graph) {
+		$output .= '<img src="' . $graph . '" /><br/><br/>';
+	}
+	
+	return $output;
+}
+
+
+// a helper function just to easily view a node's fields.
+function loiscustom_viewnode($nid) {
+	$node = node_load($nid);
+	dsm($node);
+	$output = '';
+	$output .= node_view($node, false, true, true);
+	return $output;
+}
+
+
+// helper functions
+function _get_event_by_ref_id($ref_id) {
+	$nid = db_fetch_object(db_query("SELECT nid FROM {content_type_calendar_event} WHERE field_event_ref_id_value=$ref_id"));
+	return $nid->nid;
+}
+
+function _get_post_event_by_ref_id($ref_id) {
+	$nid = db_fetch_object(db_query("SELECT nid FROM {content_type_post_event_info} WHERE field_post_ref_id_value=$ref_id"));
+	return $nid->nid;
+}
+
+
+// hooks
+function loiscustom_form_alter(&$form, &$form_state, $form_id) {
+	//dpm($form);
+	//dpm($form_state);
+	// swap the values of the DLAR and IRB choices because technically we're eliminating one,
+	// not selecting one. we're fooling the user... trust me, there's a good reason for this.
+	
+	// do some special stuff with post event surveys
+	//dpm($form['#id']);
+	if (strpos($form['#id'], 'loisform-client-form') !== false && $form['#node']->type == 'post_event_info' ) {
+		//dpm('adjusting form');
+		$form['submitted']['cert_name'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Enter your name for inclusion on completion certificate'),
+			'#size' => 60,
+			'#maxlength' => 127,
+			'#weight' => -10,
+			'#required' => TRUE,
+		);
+		$form['#validate'][] = loiscustom_post_event_survey_validate;
+		$form['#submit'][] = loiscustom_post_event_survey_submit;
+		//dpm($form);
+	}
+	
+	// after signing up for an event, show a notification that provides a link to download an .ics file with event data
+	// (this is created in the event_ical view)
+	// Added by Litza 03/01/2012
+	if($form['#id'] == 'signup-form') {
+		$form['#submit'][] = loiscustom_post_signup_submit;
+	}
+}
+
+// grab the user's name from the form to include in the certificate later
+function loiscustom_post_event_survey_validate($form, &$form_state) {
+	//dpm($form_state);
+	$cert_name = $form_state['values']['submitted']['cert_name'];
+	//dpm($cert_name);
+	$_SESSION['cert_name'] = $cert_name;
+}
+
+// redirect to our custom completion certificate download page
+function loiscustom_post_event_survey_submit($form, &$form_state) {
+	$form_state['redirect'] = 'node/' . $form['#node']->nid . '/survey-cert';
+}
+
+// add a message prompting user to download ics file
+// Added by Litza 03/01/2012
+function loiscustom_post_signup_submit($form, &$form_state) {
+  drupal_set_message('<span style="font-size:120%;font-weight:700;text-decoration:underline">'.l('Add this event to my calendar', 'calendar/ical/'.$form_state['values']['nid']).'</span>');
+}
+
+// the combination of CCK and Webforms both manipulating weights makes this info field impossible
+// to position before the elements on that page. I've tried very low negative values even.
+// an alternative is to override the template/output which is like, way more annoying, plus
+// that should be done on the theme level. but then again this will just be using the admin theme. argh.
+function loiscustom_form_loisform_components_form_alter(&$form, &$form_state) {
+	//drupal_add_js(drupal_get_path('module', 'loiscustom') . '/loiscustom.js');  // handles a quirk in the form weights that prevents me from floating the instructions to the top.
+	$form['helptext']['instructions'] = array(
+		'#type' => 'fieldset',
+  		'#title' => 'Instructions',
+  		'#value' => '<div class="survey-instructions">Enter the text of a question in the first text box, then choose the type of question, whether the question is required or not, and then click "Add Question." You will be taken to the next page to fill in other information about the question, such as choices. The order of the questions can be rearranged by dragging the rows. When happy with your survey, press "Submit."</div>', 
+  		'#weight'=>-1);
+	$form['add']['type']['#options']['select'] = 'Multiple Choice';
+	$form['add']['type']['#options']['textarea'] = 'Text Answer (multiple lines)';
+	$form['add']['type']['#options']['textfield'] = 'Text Answer (one line)';
+	//$form['add']['add']['#value'] = "Add Question";
+}
+
+
+
+function loiscustom_form_loisform_component_edit_form_alter(&$form, &$form_state) {
+	//dpm($form);
+	$form['name']['#title'] = 'Question';  // more common-sensical than 'label'
+	$form['form_key']['#type'] = 'hidden';  // user doesn't need to see this
+	$form['display']['#type'] = 'hidden';
+	$form['value']['#type'] = 'hidden';
+	$form['extra']['description']['#title'] = 'Description - optional field: use to clarify question';
+	//$form['extra']['description']['#description'] = 'hidee ho';
+	// for questions with choices (select) add our custom choices box which gets converted to the standard loisform version
+	// behind the scenes.
+	if ($form['type']['#value'] == 'select') {
+		// first adjust and hide the options fields
+		$form['extra']['items']['#default_value'] = 'missing|Missing';
+		$form['extra']['items']['#type'] = 'hidden';
+		$form['extra']['options_source']['#type'] = 'hidden';	
+		
+		$default_value = '';
+		$cid = $form['cid']['#value'];
+		if ($cid) {
+			$nid = $form['nid']['#value'];
+			$extra = db_fetch_object(db_query("SELECT extra FROM {loisform_component} WHERE nid=$nid and cid=$cid"));
+			$uextra = unserialize($extra->extra);
+			$default_value = $uextra['custom_opts'];
+		}
+		else {
+			$default_value = '';
+		}
+		$form['custom_options'] = array(
+			'#type' => 'textarea',
+			'#title' => 'Answer Choices',
+			'#rows' => 5,
+			'#weight' => 0,
+			'#wysiwyg' => 0,
+			'#default_value' => $default_value,
+		);
+	
+		// add my validation function which converts the custom options to loisform options
+		$form['#validate'][] = loiscustom_survey_options_validate;
+	}
+}
+
+// construct options in the form that loisforms likes them in. normally the user would do this when
+// entering the options (choices) for a multiple choice question, but to simplify things I'm letting them
+// just enter regular strings and converting them to the correct format before submission.
+function _construct_options($options) {
+   $result = '';
+   $opt_array = explode("\n",$options);
+    foreach($opt_array as $opt) {
+        $new_opt = preg_replace("/[^a-zA-Z0-9]/", "", $opt);
+        $result .= $new_opt . '|' . $opt . "\n";  // save in the format that loisforms needs.
+    }
+    return $result;
+}
+
+function loiscustom_survey_options_validate($form, &$form_state) {
+	//dd($form_state['values']['custom_options']);
+	$new_options = _construct_options($form_state['values']['custom_options']);
+	//dd($new_options);
+	$form_state['values']['extra']['items'] = $new_options;
+	$form_state['values']['extra']['custom_opts'] = $form_state['values']['custom_options'];
+	//dpm($form_state['values']);
+}
+
+
+
+// change some loisform stuff. 
+// - change title from 'Webform' to 'Survey' on node edit pages
+// remember, this hook only fires when the menu is generated, i.e. when the cache is flushed.
+function loiscustom_menu_alter(&$items) {
+	$items['node/%loisform_menu/loisform']['title'] = 'Edit Survey';
+	$items['node/%loisform_menu/loisform']['weight'] = 2;
+	
+	
+	// use my own access instead of loisform's - this is a way to not show the results link on the node page
+	// that can be done without CSS. probably will switch it to CSS once I know I'm allowed to change the theme.
+	//$items['node/%loisform_menu/loisform-results']['access callback'] = 'loiscustom_loisform_results_access';
+}
+
+
+function loiscustom_loisform_results_access($node, $account = NULL) {
+	//dpm($node);
+	//dpm(request_uri());
+	$pos = strpos(request_uri(),'loisform-results');
+	if($pos === false) {
+	}
+	else {
+		return TRUE;
+	}
+	global $user;
+	$account = isset($account) ? $account : $user;
+	if ($node->type == 'calendar_event' || $node->type == 'post_event_info') {
+		return FALSE;
+	}
+	return node_access('view', $node, $account) && (user_access('access all loisform results', $account) || (user_access('access own loisform results', $account) && $account->uid == $node->uid));
+	//return FALSE;
+	//return TRUE;
+}
+
+
+
+
+// after inserting a Calendar Event node, create a linked post-event node.
+// the main reason this is done is because Webforms currently only attach to one node at a time,
+// so we needed a way to link a second loisform (post-event survey) to the original event.
+function loiscustom_nodeapi(&$node, $op) {
+	switch($op) {
+		case 'insert':
+			if ($node->type == 'calendar_event') {
+				$post_event = new stdClass();
+				$post_event->type = 'post_event_info';
+				$post_event->title = $node->title . ' - Post Event Info and Survey';
+				$post_event->uid = $node->uid;
+				$post_event->field_post_ref_id[0]['value'] = $node->field_event_ref_id[0]['value'];  // link to the event via ref id
+				$post_event->loisform = loisform_node_defaults();  // if we don't initialize this, the node save throws a warning cuz no roles are set up for the webform
+//				$post_event->loisform = array(
+//    'confirmation' => '',
+//    'confirmation_format' => FILTER_FORMAT_DEFAULT,
+//    'redirect_url' => '<confirmation>',
+//    'teaser' => 0,
+//    'block' => 0,
+//    'allow_draft' => 0,
+//    'submit_notice' => 1,
+//    'submit_text' => '',
+//    'submit_limit' => -1,
+//    'submit_interval' => -1,
+//    'roles' => array(1, 2),
+//    'emails' => array(),
+//    'components' => array(),
+//  );
+				node_save($post_event);
+			}		
+			break;
+		case 'presave':
+			break;	
+	}
+}
+
+
+// was messing around with theming here but it's really just a waste of time.
+// theming should be on the theme level but there's a part of me that just
+// wants to keep everything in one module. I'l be getting rid of this..
+function loiscustom_theme2() {
+	//$path = drupal_get_path('module', 'loiscustom');
+  	//require_once "./$path/theme.inc";
+	return array(
+		'calendar_event' => array(
+		'template' => 'custom-event-template',
+     		'arguments' => array(),
+		),
+	);  	
+}
+
+
+//function loiscustom_preprocess_loisform_components_form(&$vars) {
+//	$vars['intro_text'] = t('This is my awesome form');
+ //	$vars['rendered'] = drupal_render($vars['form']);
+//}
+
+
+
+function loiscustom_theme_registry_alter(&$theme_registry){
+	//dd('theme registry alter');
+	//dsm($theme_registry);
+  	//$theme_registry['links']['function'] = loiscustom_links;
+	//dsm($theme_registry);
+}
+
+
+
+
+function loiscustom_links($links, $attributes = array('class' => 'links')) {
+	//dd($links);
+	//dd($attributes);
+	global $language;
+  	$output = '';
+
+  	if (count($links) > 0) {
+    	$output = '<ul' . drupal_attributes($attributes) . '>';
+    	$num_links = count($links);
+    	$i = 1;
+
+    	foreach ($links as $key => $link) {
+      		$class = $key;
+
+      		// Add first, last and active classes to the list of links to help out themers.
+      		if ($i == 1) {
+        		$class .= ' first';
+        		if ($attributes['calendar']) {
+        			$class .= ' calendar-year-view';	
+        		}
+      		}
+      		if ($i == 2 && $attributes['calendar']) {
+      			$class .= ' calendar-month-view';
+      		}
+      		if ($i == 3 && $attributes['calendar']) {
+      			$class .= ' calendar-week-view';
+      		}
+      		if ($i == 4 && $attributes['calendar']) {
+      			$class .= ' calendar-day-view';
+      		}
+      		if ($i == 5 && $attributes['calendar']) {
+      			$class .= ' calendar-event-add';	
+      		}
+      		if ($i == $num_links) {
+        		$class .= ' last';
+      		}
+      		if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
+           		&& (empty($link['language']) || $link['language']->language == $language->language)) {
+        			$class .= ' active';
+      		}
+      		$output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
+
+      		if (isset($link['href'])) {
+        		// Pass in $link as $options, they share the same keys.
+        		$output .= l($link['title'], $link['href'], $link);
+      		}
+      		else if (!empty($link['title'])) {
+        		// Some links are actually not links, but we wrap these in <span> for adding title and class attributes
+        		if (empty($link['html'])) {
+          			$link['title'] = check_plain($link['title']);
+        		}
+        		$span_attributes = '';
+        		if (isset($link['attributes'])) {
+          			$span_attributes = drupal_attributes($link['attributes']);
+        		}
+        		$output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
+     		}
+
+      		$i++;
+      		$output .= "</li>\n";
+    	}
+
+    $output .= '</ul>';
+  }
+ 
+  return $output;
+}
+
+
+
+
+?>

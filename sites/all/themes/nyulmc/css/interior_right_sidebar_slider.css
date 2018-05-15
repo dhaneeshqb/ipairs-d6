@@ -1,0 +1,552 @@
+/* Main Column Styles */
+
+
+
+div#column_main div#content_main {
+
+ margin: 0 0 0 32px;
+
+}
+
+
+
+/* Senior Leadership Landing Page */
+
+
+
+ul.display-people {
+
+ margin: 0;
+
+ padding: 0;
+
+ list-style: none !important;
+
+}
+
+
+
+ul.display-people hr {
+
+ background-color: #ccc;
+
+ color: #ccc;
+
+ height: 3px;
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+ul.display-people li {
+
+ margin: 0 0 10px 0;
+
+ display: block;
+
+ padding: 10px 0 10px 10px;
+
+ background-color: #E8E8E8;
+
+}
+
+
+
+ul.display-people li.seperator {
+
+ background-color: #fff;
+
+ margin: 0 0 10px 0;
+
+ padding: 0 0 0 0;
+
+ line-height: 0;
+
+}
+
+
+
+ul.display-people li img {
+
+ float: left;
+
+ display: inline;
+
+ margin-right: 20px;
+
+}
+
+
+
+ul.display-people li div {
+
+ float: left;
+
+ display: inline;
+
+ margin: 10px 0 0 0;
+
+}
+
+
+
+ul.display-people li div a {
+
+ display: block;
+
+ font-weight: bold;
+
+}
+
+
+
+ul.display-people li div span {
+
+ color: #333;
+
+}
+
+
+
+ul.display-people li.divider {
+
+ margin: 0 0 10px 0;
+
+ padding: 0;
+
+ font-size: 0;
+
+ line-height: 0;
+
+ height: 2px;
+
+ background-color: #E8E8E8;
+
+}
+
+
+
+/* Senior Leadership Detail Page */
+
+
+
+div.leadership_detail {
+
+ margin: 0 0 10px 0;
+
+ padding: 0 0 10px 0;
+
+}
+
+
+
+div.leadership_detail .field-leadership-title {
+
+ display: block;
+
+ font-weight:bold;
+
+}
+
+
+
+div.leadership_detail .group-leadership-information {
+
+ padding-bottom: 12px;
+
+}
+
+
+
+div.leadership_detail img {
+
+ display: inline;
+
+ float: left;
+
+ margin: 0 25px 25px 0;
+
+}
+
+
+
+div.leadership_detail div {
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+div.leadership_detail .content {
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+div.leadership_detail div h2 {
+
+ color: #333;
+
+ font-weight: bold;
+
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+
+ margin: 0;
+
+}
+
+
+
+div.leadership_detail div span {
+
+ display: block;
+
+}
+
+
+
+div.leadership_detail div p {
+
+ line-height: 19px;
+
+}
+
+
+
+div.leadership_detail a.bttn {
+
+ display: inline;
+
+ float: right;
+
+ margin-top: 10px;
+
+}
+
+
+
+div.leadership_detail div.leadership_detail_footer {
+
+ border-bottom: 1px solid #CCC;
+
+ clear: both;
+
+}
+
+
+
+/* Important Numbers Styles */
+
+
+
+div#important_numbers {
+
+ background-color: #FFF;
+
+ border: 1px solid #CCC;
+
+ margin: 20px 0 20px 10px;
+
+ width: 240px;
+
+}
+
+
+
+div#important_numbers h2 {
+
+ color: #6A3B11;
+
+ margin: 0 0 0 20px;
+
+ padding: 20px 0;
+
+}
+
+
+
+div#important_numbers h3 {
+
+ border-top: 1px solid #CCC;
+
+ border-bottom: 1px solid #CCC;
+
+ color: #333;
+
+ font-size: 14px;
+
+ font-weight: bold;
+
+ margin: 0 0 15px 0;
+
+ padding: 3px 10px;
+
+}
+
+
+
+
+
+
+
+div#important_numbers h4 {
+
+ color: #515151;
+
+ font-size: 100%;
+
+ padding: 0 10px 20px 12px;
+
+}
+
+
+
+#content div.column_main {
+
+  float:left;
+
+  margin:0px;
+
+  width:438px;
+
+  
+
+}
+
+
+
+/* *** For slider *** */
+
+.department-slider  {
+
+  height: 238px;
+
+  margin: 0;
+
+  position: relative;
+
+  width: 438px;
+
+  left:267px;
+
+  *left:0px;
+
+  padding: 0 0 25px;
+
+}
+
+.department-slider .slider-wrapper {
+
+  height: 238px;
+
+  left: 0px;
+
+  *left: 0px;
+
+  margin: 0;
+
+  overflow: auto;
+
+  position: absolute;
+
+  top: 0;
+
+  width: 438px;
+
+}
+
+.slider-wrapper li {
+
+	background-color:#000000 !important;	
+
+}
+
+.department-slider .slider-wrapper ul {
+
+	background-color:#000000 !important;	
+
+  left: 0px;
+
+  list-style: none outside none;
+
+  margin: 0;
+
+  padding: 0;
+
+  position: absolute;
+
+  top: 0;
+
+  width: 438px;
+
+}
+
+.department-slider .slider-wrapper ul li {
+
+  display: block;
+
+  float: left;
+
+  height: 238px;
+
+  margin: 0;
+
+  padding: 0;
+
+  width: 438px;
+
+}
+
+.department-slider .arrow {
+
+  display: none;
+
+}
+
+.department-slider .forward {
+
+}
+
+.department-slider .back {
+
+}
+
+.department-slider .forward:hover {
+
+}
+
+.department-slider .back:hover {
+
+}
+
+
+
+.department-slider #thumbNav {
+
+  position: absolute;
+
+  bottom: 40px;
+
+  left: 15px;
+
+  *left: 15px;
+
+}
+
+.department-slider #thumbNav a {
+
+  display: inline-block;
+
+  -o-border-radius: 4px;
+
+  -webkit-border-radius: 4px;
+
+  -moz-border-radius: 4px;
+
+  border-radius: 4px;
+
+  background: url(../images_layout/department_slider/square.png) no-repeat;
+
+  _background: url(../images_layout/department_slider/square.gif) no-repeat;
+
+  color: white;
+
+  font: 11px/21px arial;
+
+  height: 22px;
+
+  width: 20px;
+
+  margin: 0 .5em 0 0;
+
+  text-align: center;
+
+}
+
+.department-slider #thumbNav a:hover {
+
+  color: black;
+
+  text-decoration: none;
+
+}
+
+.department-slider #thumbNav a.cur {
+
+  color: black;
+
+}
+
+.start-stop {
+
+  display: none;
+
+}
+
+.start-stop.playing {
+
+}
+
+.start-stop:hover {
+
+}
+
+/* Right Column Styles */
+
+div#column_right_content {
+ width: 227px;
+ height: auto !important;
+ height: 500px;
+ background: url(../images_layout/rt_col_news/bg_gradient.jpg) left top no-repeat;
+ padding: 20px;
+}
+
+div#column_right_content_bottom {
+ width: 267px;
+ height: 3px;
+ background: url(../images_layout/rt_col_news/bg_gradient_bttm.jpg) left top no-repeat;
+}
+
+/* View: Display News */
+
+div.display-news ul {
+ list-style: none;
+ margin: 10px 0 0 0;
+ padding: 0;
+}
+
+div.display-news ul li {
+ border-bottom: 1px dotted #999;
+ margin: 0 0 0 0;
+ padding: 10px 0;
+ overflow: auto;
+}
+
+div.display-news ul li img {
+ float: left;
+ display: inline;
+ padding: 0 10px 0 0;
+}
+
+div.display-news ul li a {
+ color: #63A1C0;
+}
+
+div.display-news ul li.last {
+ border: none;
+}
+
+div.display-news-footer {
+ text-align: right;
+ margin: 10px 0;
+ color: #093B64;
+}

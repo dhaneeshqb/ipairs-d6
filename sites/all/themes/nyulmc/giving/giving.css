@@ -1,0 +1,315 @@
+
+/* your story css */
+#webform-component-disclaimer label,
+#webform-component-optin label {
+display: none;
+}
+
+#webform-component-disclaimer label.option,
+#webform-component-optin label.option {
+display: inline;
+}
+
+a.story {
+display: block;
+width: 214px;
+height: 20px;
+padding: 6px;
+color: #ffffff;
+text-decoration:none;
+background-color: #4f0485 !important;
+text-align: center;
+}
+
+/* testimonials css */
+#block-views-testimonials-block_1 ul {
+list-style: none;
+list-style-type: none;
+margin:0 !important; padding:0 !important;
+}
+
+#block-views-testimonials-block_1 li {
+	float: left;
+clear:both;
+	width: 600px;
+	margin:0;
+padding: 8px;
+background-color: #f6f4f7;
+margin-bottom: 16px;
+	}
+	
+#block-views-testimonials-block_1  .views-row-odd p,
+	.views-row-even p {
+        font-style: italic; 
+font-size: 13px;
+}
+	#block-views-testimonials-block_1 li.views-row-odd {
+	clear: both;
+float: left;
+	}
+	
+	#block-views-testimonials-block_1 .-field-donorname-value {
+	float: right;
+	font-style: normal; 
+	}
+
+#block-views-testimonials-block_1 .views-row {
+padding: 8px;
+background-color: #f6f4f7;
+margin-bottom: 16px;
+}
+
+/* honor roll */
+#block-block-21 {
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+#block-block-21 #honor-wrap {
+border: 1px solid #333333;
+padding: 5px;
+}
+
+#block-block-21 #honor_roll {
+	background-color: #fbfbfd;
+    
+
+}
+
+
+/* fundslist - main */
+#fundslist
+#fundslist-main {
+margin-left: 10px;
+width: 660px;
+}
+
+
+
+#fundslist a,
+#fundslist-main a {
+text-decoration:none;
+color: #550f89;
+font-size: 13px;
+font-family: Verdana, Helvetica, Sans Serif;
+
+}
+
+#fundslist a:hover,
+#fundslist-main a:hover {
+text-decoration: none;
+}
+
+#fundslist .odd,
+#fundslist-main .odd {
+background-color: #ffffff;
+display:block;
+padding: 6px 0px 6px 10px;
+margin:0px;
+width: 650px;
+}
+
+
+#fundslist .even,
+#fundslist-main .even {
+background-color: #f2eef4;
+display:block;
+padding: 6px 0px 6px 10px;
+margin:0px;
+width: 650px;
+}
+
+#fundslist-main .even {
+background-color: #f2eef4;
+}
+
+.larger {
+font-size: 16px;
+}
+
+/* css override */
+div#column_right_content {
+ width: 247px;
+ height: auto !important;
+ height: 500px;
+ background-image: none !important;
+background-color: #fbfbfd;
+ padding-top: 10px;
+ padding-left: 10px;
+padding-right: 10px;
+}
+
+
+div#column_right_content_bottom {
+ width: 267px;
+ height: 3px;
+background-image: none !important;
+background-color: #ffffff;
+}
+
+.testimonials p {
+font-size: 14px !important;
+font-style:italic !important;
+}
+
+.testimonials p a {
+color: #rgb(30, 137, 177) !important;
+font-size: 13px !important;
+font-style: normal;
+font-weight: bold;
+}
+
+#block-views-patient_quotes-block_1 .-field-excerpt-value,
+#block-views-patient_quotes-block_1 -field-excerpt-value p,
+#block-views-patient_quotes-block_1 p {
+font-style: italic !important;
+}
+
+#footer {
+  -webkit-background-size:100% 14px;
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:#333333;
+  background-image:-webkit-gradient(linear, 0 0%, 0 100%, from(#252525), color-stop(0.33, #292929), color-stop(0.66, #303030), to(#333333));
+  background-origin:initial;
+  background-position:50% 0;
+  background-repeat:no-repeat no-repeat;
+}
+
+p#phone_number strong {
+  display:block;
+  font-family:SortsMillGoudy, Georgia, 'Times New Roman', Times, serif;
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:2px;
+  line-height:24px;
+  width:205px;
+}
+
+#slider {
+display: none;
+}
+
+#pullquotes {
+/*background: transparent url('http://development.webdev.nyumc.org/sites/default/files/giving2/pullquote.gif') top left no-repeat;*/
+position: absolute;
+top: 12px;
+left: -20px;
+margin:0;
+padding:0;
+}
+
+#pullquote-holder {
+width: 689px;
+height: 210px;
+display: block;
+}
+
+h1.field-department-teaser {
+display: none;
+}
+
+#tmain {
+width: 680px;
+}
+
+#tmain h1 {
+margin-top: 10px;
+}
+
+#content_main,
+.content {
+margin: 0px !important;
+padding: 0px !important;
+}
+
+#column_main,
+.column_main {
+padding: 0px !important;
+margin: 0px !important;
+}
+
+.node-home {
+margin:0px !important;
+padding: 0px !important;
+}
+
+.meta {
+display: none;
+}
+
+
+/*sidelist */
+
+#sidelist {
+zIndex: 1000;
+width: 227px;
+position: absolute;
+top: 134px;
+left: 715px;
+background-color: #ffffff;
+}
+
+#sidelist img {
+margin-right: 4px;
+margin-bottom: 4px;
+}
+
+#sidelist a {
+font-size: 14px;
+}
+
+#close {
+display: none;
+position:absolute;
+top: 134px;
+left: 945px;
+width: 15px;
+height: 15px;
+color: #000000;
+background-color: #ffffff;
+}
+
+.fftitle {
+font-size: 18px;
+color: #57108a;
+float: left;
+display: block;
+margin-bottom: 5px;
+}
+
+.ffhon {
+color: #000000;
+font-size: 14px;
+float: left;
+clear: both;
+display: block;
+}
+
+#dbt {
+float: left;
+margin-left: 5px;
+color: #ffffff;
+background-color: #57108a;
+padding: 4px;}
+
+#doc {
+width: 180px;
+height: 17px;
+float:left;
+clear: both;
+}
+
+#ffcell {
+background: #ffffff url('/sites/default/files/giving2/faculty.jpg') top left no-repeat;
+width: 485px;
+height: 93px;
+padding-left: 220px;
+padding-top: 40px;
+}
+
+h3.wnew {
+color: #470478;
+font-size: 17px;
+}

@@ -1,0 +1,14 @@
+; $Id: date_repeat_presets.info,v 1.1 2010/11/13 23:17:10 chaps2 Exp $
+name = Date Repeat Presets
+description = Adds repeating date rule presets for a simplified UI.
+package = Date/Time
+dependencies[] = date_repeat
+dependencies[] = ahah_helper
+core = 6.x
+
+; Information added by drupal.org packaging script on 2010-11-14
+version = "6.x-1.0"
+core = "6.x"
+project = "date_repeat_presets"
+datestamp = "1289693018"
+

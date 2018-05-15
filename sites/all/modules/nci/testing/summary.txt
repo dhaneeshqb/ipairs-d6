@@ -1,0 +1,1600 @@
+SimpleXMLElement Object
+(
+    [@attributes] => Array
+        (
+            [id] => CDR0000256491
+            [LegacyPDQID] => 1259
+        )
+
+    [SummaryMetaData] => SimpleXMLElement Object
+        (
+            [SummaryType] => Treatment
+            [SummaryAudience] => Patients
+            [SummaryLanguage] => English
+            [SummaryDescription] => Expert-reviewed information summary about the treatment of adult primary liver cancer.
+            [SummaryURL] => Adult Primary Liver Cancer (PDQ®): Treatment
+            [MainTopics] => SimpleXMLElement Object
+                (
+                    [TermRef] => adult primary liver cancer
+                )
+
+            [SecondaryTopics] => SimpleXMLElement Object
+                (
+                    [TermRef] => adult primary liver cancer
+                )
+
+        )
+
+    [SummaryTitle] => Adult Primary Liver Cancer Treatment (PDQ®)
+    [AltTitle] => Adult Primary Liver Cancer Treatment
+    [SummarySection] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _1
+                        )
+
+                    [Title] => General Information About Adult Primary Liver  Cancer
+                    [SummarySection] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _2
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Array
+                                                (
+                                                    [0] => Cancer description
+                                                    [1] => Organ description
+                                                )
+
+                                        )
+
+                                    [KeyPoint] => Adult primary liver  cancer is a disease in which malignant (cancer) cells form in
+		  the tissues of the liver.
+                                    [Para] => Array
+                                        (
+                                            [0] => The  is one of the largest  in the body. It has four  and fills the upper right side of the  inside the rib cage.  The liver  has  many important functions, including:
+                                            [1] => This summary refers to the treatment of   ( that begins in the liver). Treatment of  liver cancer, which is cancer that begins in other parts of the body and spreads to the liver, is not discussed in this summary. Primary liver cancer can occur in both adults and children. Treatment for children, however, is different than treatment for adults. (See the  summary on  for more information.) 
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _168
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => Filtering harmful substances from the  so they can be passed from the body  in  and .
+                                                    [1] => Making   to help  fats from food.  
+                                                    [2] => Storing glycogen (sugar), which the body uses for energy. 
+                                                )
+
+                                        )
+
+                                    [MediaLink] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ref] => CDR0000658698
+                                                    [alt] => Anatomy of the liver; drawing shows the right and left  front lobes of the liver, bile ducts, gallbladder, stomach, spleen, pancreas, colon, and small intestine. The two back lobes of the liver are not shown.
+                                                    [language] => en
+                                                    [thumb] => Yes
+                                                    [id] => _185
+                                                )
+
+                                            [Caption] => Anatomy of the  liver. The liver is in the upper abdomen near the stomach, intestines, gallbladder, and pancreas. The liver has four lobes. Two lobes are on the front and two small lobes (not shown) are on the back of the liver.
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _8
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Risk factors
+                                        )
+
+                                    [KeyPoint] => Having hepatitis or cirrhosis can affect the risk of developing adult primary liver cancer.  
+                                    [Para] => Anything that increases your chance of getting a disease is called a . Having a risk factor does not mean that you will get cancer; not having risk factors doesn’t mean that you will not get cancer. People who think they may be at risk should discuss this with their doctor. The following are possible risk factors for adult primary liver cancer:
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _11
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => Having  and/or . 
+
+                                                    [1] => Having a close relative with both hepatitis and liver cancer.
+                                                    [2] => 
+ 
+Having .
+
+                                                    [3] => Eating foods tainted with  (poison from a  that can grow on foods, such as grains and nuts, that have not been stored properly).
+ 
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _14
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Symptoms
+                                        )
+
+                                    [KeyPoint] => Possible signs of adult primary liver cancer include a lump or pain on the right side.  
+                                    [Para] => These  may be caused by swelling of the liver. These and other symptoms may be caused by adult primary liver cancer or by other conditions. A doctor should be consulted if any of the following problems occur:
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _17
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => A hard lump on the right side just below the rib cage.
+                                                    [1] =>  
+    Discomfort in the upper abdomen on the right side.
+                                                    [2] =>  
+    Pain around the right .
+                                                    [3] => Unexplained weight loss.
+                                                    [4] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Jaundice
+                                                        )
+
+                                                    [5] => Unusual tiredness.
+                                                    [6] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Nausea
+                                                        )
+
+                                                    [7] => Loss of .
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _18
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Diagnostic tests
+                                        )
+
+                                    [KeyPoint] => Tests that examine the liver and the blood are used to detect (find) and diagnose adult primary liver cancer.
+                                    [Para] => The following tests and procedures may be used:
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _21
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Physical exam
+                                                                    [1] => history
+                                                                )
+
+                                                        )
+
+                                                    [1] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Serum tumor marker test
+                                                                    [1] => tissues
+                                                                    [2] => tumor
+                                                                    [3] => cells
+                                                                    [4] => tumor markers
+                                                                    [5] => alpha-fetoprotein
+                                                                )
+
+                                                        )
+
+                                                    [2] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Liver function tests
+                                                        )
+
+                                                    [3] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => CT scan
+                                                                    [1] => x-ray
+                                                                    [2] => dye
+                                                                    [3] => injected
+                                                                    [4] => vein
+                                                                    [5] => spiral
+                                                                    [6] => helical CT
+                                                                )
+
+                                                        )
+
+                                                    [4] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => MRI
+                                                                    [1] => blood vessels
+                                                                    [2] => angiography
+                                                                )
+
+                                                        )
+
+                                                    [5] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Ultrasound
+                                                                    [1] => sonogram
+                                                                )
+
+                                                        )
+
+                                                    [6] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Angiogram
+                                                                    [1] => blood vessels
+                                                                )
+
+                                                        )
+
+                                                    [7] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Laparoscopy
+                                                                    [1] => surgical
+                                                                    [2] => incisions
+                                                                    [3] => laparoscope
+                                                                    [4] => biopsy
+                                                                )
+
+                                                        )
+
+                                                    [8] => Biopsy: The removal of cells or tissues so they can be viewed under a  by a  to check for signs of cancer. The sample may be taken using a thin needle inserted into the liver during an x-ray or ultrasound. This is called a . The biopsy  may be done during a laparoscopy. 
+                                                )
+
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _24
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Prognostic factors
+                                        )
+
+                                    [KeyPoint] => Certain factors affect prognosis (chance of recovery) and  treatment options.
+                                    [Para] => Array
+                                        (
+                                            [0] => The  (chance of recovery) and treatment options depend on the following:
+                                            [1] => Prognosis is also affected by alpha-fetoprotein (AFP) levels.
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _160
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => The  of the cancer (the size of the , whether it affects part or all of the liver, or has spread to other places in the body).
+                                                    [1] => How well the liver is working.
+                                                    [2] => The patient’s general health, including whether there is cirrhosis of the liver.
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _27
+                        )
+
+                    [Title] => Stages of Adult Primary Liver  Cancer
+                    [SummarySection] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _28
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Diagnostic tests
+                                        )
+
+                                    [KeyPoint] => After adult primary liver  cancer has been diagnosed, tests are done to find out if cancer cells have spread within the liver  or to other parts of the body. 
+                                    [Para] => The process used to find out if  has spread within the  or to other parts of the body is called . The information gathered from the staging process determines the  of the disease. It is important to know the stage in order to plan treatment. The following tests and procedures may be used in the staging
+		  process:
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _119
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Chest x-ray
+                                                                    [1] => x-ray
+                                                                    [2] => organs
+                                                                )
+
+                                                        )
+
+                                                    [1] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => CT scan
+                                                                    [1] => dye
+                                                                    [2] => injected
+                                                                    [3] => vein
+                                                                    [4] => tissues
+                                                                )
+
+                                                        )
+
+                                                    [2] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => MRI
+                                                        )
+
+                                                    [3] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Bone scan
+                                                                    [1] => cells
+                                                                    [2] => radioactive
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _177
+                                        )
+
+                                    [KeyPoint] => There are three ways that cancer spreads in the body.
+                                    [Para] => Array
+                                        (
+                                            [0] => The three ways that cancer spreads in the body are:
+                                            [1] => When cancer  break away from the  (original)  and travel through the  or blood to other places in the body, another (secondary) tumor may form. This process is called . The secondary (metastatic) tumor is the same type of cancer as the primary tumor. For example, if  spreads to the bones, the cancer cells in the bones are actually breast cancer cells. The disease is metastatic breast cancer, not .
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _177_9
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => Through . Cancer  the surrounding normal tissue.
+                                                    [1] => Through the . Cancer invades the lymph system and travels through the  to other places in the body.
+                                                    [2] => Through the . Cancer invades the  and  and travels through the blood to other places in the body.
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _120
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Classification by stage
+                                        )
+
+                                    [KeyPoint] => The following stages are used for adult primary liver cancer:
+                                    [SummarySection] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _122
+                                                        )
+
+                                                    [KeyPoint] => Stage I
+                                                    [Para] => In , there is one  and it  has not spread to nearby .
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _125
+                                                        )
+
+                                                    [KeyPoint] => Stage II
+                                                    [Para] => In ,  one of the following is found:
+                                                    [ItemizedList] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _128
+                                                                    [Style] => bullet
+                                                                )
+
+                                                            [ListItem] => Array
+                                                                (
+                                                                    [0] =>  
+				one  that has spread to nearby ; or
+                                                                    [1] => 	more than one tumor, none of which is larger than 5 .
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [2] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _129
+                                                        )
+
+                                                    [KeyPoint] => Stage III
+                                                    [Para] => Stage III is divided into Stage IIIA, IIIB, and IIIC. 
+                                                    [ItemizedList] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _164
+                                                                    [Style] => bullet
+                                                                    [Compact] => No
+                                                                )
+
+                                                            [ListItem] => Array
+                                                                (
+                                                                    [0] => In ,  one of the following is found:
+                                                                    [1] => In , there are one or more  of any size that have either: 
+                                                                    [2] => In , the  has spread to nearby .
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [3] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _136
+                                                        )
+
+                                                    [KeyPoint] => Stage IV
+                                                    [Para] => In ,  has spread beyond the  to other places in the body, such as the bones or . The  may be of any size and may also have spread to nearby  and/or .
+                                                )
+
+                                        )
+
+                                    [MediaLink] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [ref] => CDR0000415526
+                                                    [alt] => Tumor size compared to everyday objects; shows various measurements of a tumor compared to a pea, peanut, walnut, and lime
+                                                    [language] => en
+                                                    [thumb] => Yes
+                                                    [id] => _170
+                                                    [size] => full
+                                                )
+
+                                            [Caption] => Pea, peanut, walnut, and lime show tumor sizes.
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _31
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Classification by stage
+                                        )
+
+                                    [KeyPoint] => For adult primary liver cancer, stages are also grouped according to how the cancer may be treated. There are 3 treatment groups:
+                                    [SummarySection] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _33
+                                                        )
+
+                                                    [KeyPoint] => Localized resectable
+                                                    [Para] => The  is found in the  only, has not spread, and can be completely removed by .
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _36
+                                                        )
+
+                                                    [KeyPoint] => Localized and locally advanced unresectable
+                                                    [Para] => The  is found in the  only and has not spread, but cannot be completely removed by .
+                                                )
+
+                                            [2] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _39
+                                                        )
+
+                                                    [KeyPoint] => Advanced
+     
+                                                    [Para] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _41
+                                                                )
+
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Cancer
+                                                                    [1] => liver
+                                                                    [2] => lungs
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _42
+                        )
+
+                    [SectMetaData] => SimpleXMLElement Object
+                        (
+                            [SectionType] => Classification by stage
+                        )
+
+                    [Title] => Recurrent Adult Primary Liver  Cancer
+                    [Para] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [id] => _43
+                                )
+
+                            [GlossaryTermRef] => Array
+                                (
+                                    [0] => Recurrent
+                                    [1] => primary
+                                    [2] => liver cancer
+                                    [3] => cancer
+                                    [4] => liver
+                                )
+
+                        )
+
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _44
+                        )
+
+                    [Title] => Treatment Option Overview
+                    [SummarySection] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _45
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Standard treatment
+                                        )
+
+                                    [KeyPoint] => There are different types of treatment for  patients with adult primary liver  cancer.
+                                    [Para] => Different types of treatments are available for  patients with adult  . Some treatments are  (the currently used treatment), and some are being tested in . A treatment clinical trial is a research study meant to help improve current treatments or obtain information on new treatments for patients with . When clinical trials show that a new treatment is better than the  standard treatment, the new treatment may become the standard treatment.    Patients may want to think about taking part in a clinical trial. Some clinical trials are open only to patients who have not started treatment.
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _49
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Standard treatment
+                                        )
+
+                                    [KeyPoint] => Four types of standard treatment are used:
+                                    [SummarySection] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _51
+                                                        )
+
+                                                    [KeyPoint] => Surgery
+                                                    [Para] => The following types of  may be used to treat liver cancer:
+                                                    [ItemizedList] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _54
+                                                                    [Style] => bullet
+                                                                )
+
+                                                            [ListItem] => Array
+                                                                (
+                                                                    [0] => SimpleXMLElement Object
+                                                                        (
+                                                                            [GlossaryTermRef] => Array
+                                                                                (
+                                                                                    [0] => Cryosurgery
+                                                                                    [1] => abnormal
+                                                                                    [2] => tissue
+                                                                                    [3] => carcinoma in situ
+                                                                                    [4] => ultrasound
+                                                                                )
+
+                                                                        )
+
+                                                                    [1] => Partial : Removal of the part of the  where cancer is found. The part removed may be a  of tissue, an entire , or a larger portion of the liver, along with some of the healthy tissue around it. The remaining liver tissue takes over the functions of the liver.
+                                                                    [2] => Total hepatectomy and liver : Removal of the entire liver and replacement with a healthy donated liver. A liver transplant may be  done when the disease is in the liver only and a  donated liver can be found.  If the patient has to wait for a donated liver, other treatment is given as needed.
+                                                                    [3] => SimpleXMLElement Object
+                                                                        (
+                                                                            [GlossaryTermRef] => Array
+                                                                                (
+                                                                                    [0] => Radiofrequency ablation
+                                                                                    [1] => cells
+                                                                                    [2] => local anesthesia
+                                                                                    [3] => incision
+                                                                                    [4] => abdomen
+                                                                                    [5] => general anesthesia
+                                                                                )
+
+                                                                        )
+
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _57
+                                                        )
+
+                                                    [KeyPoint] => Radiation therapy
+                                                    [Para] => Array
+                                                        (
+                                                            [0] => SimpleXMLElement Object
+                                                                (
+                                                                    [@attributes] => Array
+                                                                        (
+                                                                            [id] => _157
+                                                                        )
+
+                                                                    [GlossaryTermRef] => Array
+                                                                        (
+                                                                            [0] => Radiation therapy
+                                                                            [1] => x-rays
+                                                                            [2] => radiation
+                                                                        )
+
+                                                                )
+
+                                                            [1] => The way the radiation therapy is given depends on the type and  of the cancer being treated.
+                                                        )
+
+                                                    [ItemizedList] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _155
+                                                                    [Style] => bullet
+                                                                )
+
+                                                            [ListItem] => Array
+                                                                (
+                                                                    [0] => SimpleXMLElement Object
+                                                                        (
+                                                                            [GlossaryTermRef] => External radiation
+                                                                        )
+
+                                                                    [1] => SimpleXMLElement Object
+                                                                        (
+                                                                            [GlossaryTermRef] => Array
+                                                                                (
+                                                                                    [0] => Internal radiation
+                                                                                    [1] => radioactive
+                                                                                    [2] => seeds
+                                                                                    [3] => catheters
+                                                                                )
+
+                                                                        )
+
+                                                                    [2] => SimpleXMLElement Object
+                                                                        (
+                                                                            [GlossaryTermRef] => Array
+                                                                                (
+                                                                                    [0] => Drugs
+                                                                                    [1] => radiosensitizers
+                                                                                )
+
+                                                                        )
+
+                                                                    [3] => Radiation may be delivered to the  using   .  Radioactive substances are attached to antibodies made in the laboratory. These antibodies, which target tumor cells, are  into the body and the tumor cells  are killed by the radioactive substance.
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [2] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _62
+                                                        )
+
+                                                    [KeyPoint] => Chemotherapy
+                                                    [Para] => Array
+                                                        (
+                                                            [0] => SimpleXMLElement Object
+                                                                (
+                                                                    [@attributes] => Array
+                                                                        (
+                                                                            [id] => _106
+                                                                        )
+
+                                                                    [GlossaryTermRef] => Array
+                                                                        (
+                                                                            [0] => Chemotherapy
+                                                                            [1] => vein
+                                                                            [2] => systemic chemotherapy
+                                                                            [3] => cerebrospinal fluid
+                                                                            [4] => organ
+                                                                            [5] => cavity
+                                                                            [6] => regional chemotherapy
+                                                                        )
+
+                                                                )
+
+                                                            [1] => Regional chemotherapy is usually used to treat liver cancer. A small pump containing anticancer drugs may be placed in the body. The pump puts the drugs directly into the  that go to the tumor.
+                                                            [2] => Another type of regional chemotherapy is  of the . The anticancer drug is injected into the hepatic artery through a catheter (thin tube). The drug is  mixed with a  substance that blocks the artery, cutting off  flow to the tumor. Most of the anticancer drug is trapped near  the tumor and only a small amount of the drug  reaches other parts of the body. The blockage may be temporary or permanent, depending on  the substance used to block the artery. The tumor is prevented  from getting the oxygen and  it needs to grow. The liver continues to receive blood from the , which carries blood from the  and .
+                                                            [3] => The way the chemotherapy is given depends on the type and stage of the cancer being treated.
+                                                        )
+
+                                                )
+
+                                            [3] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _73
+                                                        )
+
+                                                    [KeyPoint] => Percutaneous ethanol injection
+     
+                                                    [Para] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _75
+                                                                )
+
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Percutaneous ethanol injection
+                                                                    [1] => anesthesia
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _55
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SectionType] => Treatment in clinical trials
+                                        )
+
+                                    [KeyPoint] => New types of treatment are being tested in clinical trials. 
+                                    [Para] => This summary section describes treatments that are being studied in . It may not mention every new treatment being studied.  Information about  clinical trials is available from the .
+                                    [SummarySection] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _67
+                                                        )
+
+                                                    [KeyPoint] => Hyperthermia therapy
+                                                    [Para] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _69
+                                                                )
+
+                                                            [GlossaryTermRef] => Hyperthermia therapy
+                                                        )
+
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [@attributes] => Array
+                                                        (
+                                                            [id] => _76
+                                                        )
+
+                                                    [KeyPoint] => Biologic therapy
+                                                    [Para] => SimpleXMLElement Object
+                                                        (
+                                                            [@attributes] => Array
+                                                                (
+                                                                    [id] => _108
+                                                                )
+
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Biologic therapy
+                                                                    [1] => immune system
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _179
+                                        )
+
+                                    [KeyPoint] => Patients may want to think about taking part in a clinical trial.
+                                    [Para] => Array
+                                        (
+                                            [0] => For some patients, taking part in a  may be the best treatment choice. Clinical trials are part of the cancer research process. Clinical trials are done to find out if new cancer  treatments are safe and effective or better than the standard treatment.
+                                            [1] => Many of today's standard treatments for cancer are based on earlier clinical trials. Patients who take part in a clinical trial may receive the standard treatment or be among the first  to receive a new treatment.
+                                            [2] => Patients who take part in clinical trials also help improve the way cancer will be treated in the future. Even when clinical trials do not lead to effective new treatments, they often answer important questions and help move research forward.
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _181
+                                        )
+
+                                    [KeyPoint] => Patients can enter clinical trials before, during, or after starting their cancer treatment.
+                                    [Para] => Array
+                                        (
+                                            [0] => Some clinical trials only include patients who have not yet received treatment. Other trials test treatments for patients whose cancer has not gotten better. There are also clinical trials that test new ways to stop cancer from  (coming back) or reduce the  of cancer treatment.
+                                            [1] => Clinical trials are taking place in many parts of the country. See the Treatment Options section that follows for links to current treatment clinical trials. These have been retrieved from  listing of clinical trials. 
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _183
+                                        )
+
+                                    [KeyPoint] => Follow-up tests may be needed.
+                                    [Para] => Array
+                                        (
+                                            [0] => Some of the tests that were done to  the cancer or to find out the  of the cancer may be repeated. Some tests will be repeated in order to see how well the treatment is working. Decisions about whether to continue, change, or stop treatment may be based on the results of these tests. This is sometimes called re-staging.
+                                            [1] => Some of the tests will continue to be done from time to time after treatment has ended. The results of these tests can show if your condition has changed or if the cancer has  (come back). These tests are sometimes called  tests or check-ups.
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [4] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _147
+                        )
+
+                    [SectMetaData] => SimpleXMLElement Object
+                        (
+                            [SectionType] => Treatment by stage--legacy
+                        )
+
+                    [Title] => Treatment Options for Adult Primary Liver  Cancer
+                    [Para] => A link to a list of current  is included for each treatment section. For some types or  of cancer, there may not be any trials listed. Check with your doctor for clinical trials that are not listed here but may be right for you.
+                    [SummarySection] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _144
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SpecificDiagnosis] => localized resectable adult primary liver cancer
+                                            [SectionType] => Treatment options by stage
+                                        )
+
+                                    [Title] =>  Localized Resectable Adult Primary Liver  Cancer
+                                    [Para] => Array
+                                        (
+                                            [0] => Treatment of   adult   may include the following:
+                                            [1] => Check for U.S. clinical trials from NCI's list of cancer clinical trials that are now accepting patients with . For more specific results, refine the search by using other search features, such as the location of the trial, the type of treatment, or the name of the drug.  General information about clinical trials is available from the .
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _88
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Surgery
+                                                                    [1] => hepatectomy
+                                                                )
+
+                                                        )
+
+                                                    [1] => Surgery (total hepatectomy) and  .
+                                                    [2] => A  of  or  or  following surgery.
+
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _89
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SpecificDiagnosis] => localized unresectable adult primary liver cancer
+                                            [SectionType] => Treatment options by stage
+                                        )
+
+                                    [Title] => Localized and Locally Advanced Unresectable Adult Primary Liver  Cancer
+                                    [Para] => Array
+                                        (
+                                            [0] => Treatment of  and    adult   may include the following:
+                                            [1] => Check for U.S. clinical trials from NCI's list of cancer clinical trials that are now accepting patients with . For more specific results, refine the search by using other search features, such as the location of the trial, the type of treatment, or the name of the drug.  General information about clinical trials is available from the .
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _91
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Surgery
+                                                                    [1] => cryosurgery
+                                                                    [2] => radiofrequency ablation
+                                                                )
+
+                                                        )
+
+                                                    [1] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Chemotherapy
+                                                                    [1] => chemoembolization
+                                                                    [2] => regional chemotherapy
+                                                                    [3] => systemic chemotherapy
+                                                                )
+
+                                                        )
+
+                                                    [2] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Percutaneous ethanol injection
+                                                        )
+
+                                                    [3] =>    Surgery (total ) and liver .
+                                                    [4] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Radiation therapy
+                                                                    [1] => radiosensitizers
+                                                                )
+
+                                                        )
+
+                                                    [5] => A  of a combination of surgery, chemotherapy, and radiation therapy.  may also be used. Chemotherapy and radiation therapy may be used to shrink the  before surgery.
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _92
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SpecificDiagnosis] => advanced adult primary liver cancer
+                                            [SectionType] => Treatment options by stage
+                                        )
+
+                                    [Title] => Advanced Adult Primary Liver  Cancer
+                                    [Para] => Array
+                                        (
+                                            [0] => There is no  for advanced adult  . Patients may consider taking part in a . Treatment may be a clinical trial of , , and/or  with or without . These treatments may be given as  to help relieve  and improve the .
+                                            [1] => Check for U.S. clinical trials from NCI's list of cancer clinical trials that are now accepting patients with . For more specific results, refine the search by using other search features, such as the location of the trial, the type of treatment, or the name of the drug.  General information about clinical trials is available from the .
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _96
+                                        )
+
+                                    [SectMetaData] => SimpleXMLElement Object
+                                        (
+                                            [SpecificDiagnosis] => recurrent adult primary liver cancer
+                                            [SectionType] => Treatment options by stage
+                                        )
+
+                                    [Title] => Recurrent Adult Primary Liver  Cancer
+                                    [Para] => Array
+                                        (
+                                            [0] => Treatment of  adult   may include the following:
+                                            [1] => Check for U.S. clinical trials from NCI's list of cancer clinical trials that are now accepting patients with . For more specific results, refine the search by using other search features, such as the location of the trial, the type of treatment, or the name of the drug.  General information about clinical trials is available from the .
+                                        )
+
+                                    [ItemizedList] => SimpleXMLElement Object
+                                        (
+                                            [@attributes] => Array
+                                                (
+                                                    [id] => _98
+                                                    [Style] => bullet
+                                                )
+
+                                            [ListItem] => Array
+                                                (
+                                                    [0] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Surgery
+                                                                    [1] => hepatectomy
+                                                                )
+
+                                                        )
+
+                                                    [1] => Surgery (total hepatectomy) and  .
+                                                    [2] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Array
+                                                                (
+                                                                    [0] => Chemotherapy
+                                                                    [1] => chemoembolization
+                                                                    [2] => systemic chemotherapy
+                                                                )
+
+                                                        )
+
+                                                    [3] => SimpleXMLElement Object
+                                                        (
+                                                            [GlossaryTermRef] => Percutaneous ethanol injection
+                                                        )
+
+                                                    [4] => A  of a new . 
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [5] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _171
+                        )
+
+                    [Title] => To Learn More About Adult Primary Liver  Cancer
+                    [Para] => Array
+                        (
+                            [0] => For more information from the  about  adult primary liver cancer, see the following: 
+                            [1] => For general  information and other resources from the National Cancer Institute, see the following:
+                        )
+
+                    [ItemizedList] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _173
+                                            [Style] => bullet
+                                        )
+
+                                    [ListItem] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Liver Cancer Home Page
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => What You Need to Know About™ Liver Cancer
+                                                )
+
+                                            [2] => SimpleXMLElement Object
+                                                (
+                                                    [SummaryRef] => Liver (Hepatocellular) Cancer Prevention
+                                                )
+
+                                            [3] => SimpleXMLElement Object
+                                                (
+                                                    [SummaryRef] => Liver (Hepatocellular) Cancer Screening
+                                                )
+
+                                            [4] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Cryosurgery in Cancer Treatment: Questions and Answers
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _171_41
+                                            [Style] => bullet
+                                        )
+
+                                    [ListItem] => Array
+                                        (
+                                            [0] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => What You Need to Know About™ Cancer
+                                                )
+
+                                            [1] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Understanding Cancer Series: Cancer
+                                                )
+
+                                            [2] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Cancer Staging
+                                                )
+
+                                            [3] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Chemotherapy and You: Support for People With Cancer
+                                                )
+
+                                            [4] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Radiation Therapy and You: Support for People With Cancer
+                                                )
+
+                                            [5] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Coping with Cancer: Supportive and Palliative Care
+                                                )
+
+                                            [6] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Cancer Library
+                                                )
+
+                                            [7] => SimpleXMLElement Object
+                                                (
+                                                    [ExternalRef] => Information For Survivors/Caregivers/Advocates
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [6] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _GetMore_3
+                        )
+
+                    [Title] => Get More Information From NCI
+                    [Para] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _GetMore_15
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => Call 1-800-4-CANCER
+                                        )
+
+                                )
+
+                            [1] => For more information, U.S. residents may call the National Cancer Institute's (NCI's) Cancer Information Service toll-free at 1-800-4-CANCER (1-800-422-6237) Monday through Friday from 8:00 a.m. to 8:00 p.m., Eastern Time.  A trained Cancer Information Specialist is available to answer your questions.
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _GetMore_25
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => Chat online 
+
+                                        )
+
+                                )
+
+                            [3] => The  online chat service provides Internet users with the ability to chat online with an Information Specialist. The service is available from 8:00 a.m. to 11:00 p.m. Eastern time, Monday through Friday. Information Specialists can help Internet users find information on NCI Web sites and answer questions about cancer.
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _GetMore_27
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => Write to us
+                                        )
+
+                                )
+
+                            [5] => For more information from the NCI, please write to this address:
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _GetMore_17
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => Search the NCI Web site
+                                        )
+
+                                )
+
+                            [7] => The  provides online access to information on cancer, clinical trials, and other Web sites and organizations that offer support and resources for cancer patients and their families.  For a quick search, use the search box in the upper right corner of each Web page. The results for a wide range of search terms will include a list of "Best Bets," editorially chosen Web pages that are most closely related to the search term entered.
+                            [8] => There are also many other places to get materials and information about cancer treatment and services.      Hospitals in your area may have information about  local and regional agencies that have information on finances, getting to and from treatment, receiving care at home, and dealing with problems related to cancer treatment.
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _GetMore_19
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => Find Publications
+                                        )
+
+                                )
+
+                            [10] => The NCI has booklets and other materials for patients, health professionals, and the public.  These publications discuss types of cancer, methods of cancer treatment, coping with cancer, and clinical trials.  Some publications provide information on tests for cancer, cancer causes and prevention, cancer statistics, and NCI research activities.  NCI materials on these and other topics may be ordered online or printed directly from the . These materials can also be ordered by telephone from the Cancer Information Service toll-free at 1-800-4-CANCER (1-800-422-6237).
+                        )
+
+                    [ItemizedList] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [id] => _GetMore_29
+                                    [Style] => simple
+                                )
+
+                            [ListItem] => Array
+                                (
+                                    [0] => NCI Public Inquiries Office
+                                    [1] => Suite 3036A
+                                    [2] => 6116 Executive Boulevard, MSC8322
+                                    [3] => Bethesda, MD 20892-8322
+                                )
+
+                        )
+
+                )
+
+            [7] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _152
+                        )
+
+                    [SectMetaData] => SimpleXMLElement Object
+                        (
+                            [SectionType] => Changes to summary
+                        )
+
+                    [Title] => Changes to This Summary (03/30/2011)
+                    [Para] => Array
+                        (
+                            [0] => The   information summaries are reviewed regularly and updated as
+new information becomes available.  This section describes the latest
+changes made to this summary as of the date above.
+                            [1] => Editorial changes were made to this summary.
+                        )
+
+                )
+
+            [8] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [id] => _AboutPDQ_14
+                        )
+
+                    [Title] => About PDQ
+                    [Para] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _AboutPDQ_10
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => PDQ is a comprehensive cancer database available on NCI's Web site.
+                                        )
+
+                                )
+
+                            [1] => PDQ is the National Cancer Institute's (NCI's) comprehensive cancer information database.  Most of the information contained in PDQ is available online at .  PDQ is provided as a service of the NCI.  The NCI is part of the National Institutes of Health, the federal government's focal point for biomedical research.
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _AboutPDQ_3
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => PDQ contains cancer information summaries.
+                                        )
+
+                                )
+
+                            [3] => The PDQ database contains summaries of the latest published information on cancer prevention, detection, genetics, treatment, supportive care, and complementary and alternative medicine.  Most summaries are available in two versions.  The health professional versions provide detailed information written in technical language.  The patient versions are written in easy-to-understand, nontechnical language.  Both versions provide current and accurate cancer information. 
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _AboutPDQ_5
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => The PDQ cancer information summaries are developed by cancer experts and reviewed regularly.
+                                        )
+
+                                )
+
+                            [5] => Editorial Boards made up of experts in oncology and related specialties are responsible for writing and maintaining the cancer information summaries.  The summaries are reviewed regularly and changes are made as new information becomes available.  The date on each summary ("Date Last Modified") indicates the time of the most recent change.
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [id] => _AboutPDQ_7
+                                        )
+
+                                    [Emphasis] => SimpleXMLElement Object
+                                        (
+                                            [Strong] => PDQ also contains information on clinical trials.
+                                        )
+
+                                )
+
+                            [7] => A clinical trial is a study to answer a scientific question, such as whether one treatment is better than another.  Trials are based on past studies and what has been learned in the laboratory.  Each trial answers certain scientific questions in order to find new and better ways to help cancer patients.  During treatment clinical trials, information is collected about the effects of a new treatment and how well it works.  If a clinical trial shows that a new treatment is better than one currently being used, the new treatment may become "standard." Patients may want to think about taking part in a clinical trial. Some clinical trials are open only to patients who have not started treatment.
+                            [8] => Listings of clinical trials are included in PDQ and are available online at .  Descriptions of the trials are available in health professional and patient versions.  Many cancer doctors who take part in clinical trials are also listed in PDQ.  For more information, call the Cancer Information Service 1-800-4-CANCER (1-800-422-6237).
+                        )
+
+                )
+
+        )
+
+    [PatientVersionOf] => SimpleXMLElement Object
+        (
+            [@attributes] => Array
+                (
+                    [ref] => CDR0000062906
+                )
+
+        )
+
+    [DateLastModified] => 2011-03-30
+)
+

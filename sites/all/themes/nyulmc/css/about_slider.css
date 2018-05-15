@@ -1,0 +1,111 @@
+#about_slider {
+ position: relative;
+ overflow: hidden;
+ height: 157px;
+ width: 694px;
+ margin-bottom: 40px;
+ /* set the background of the right content here, the tabs mask on top to create the arrow pointer */
+ background: url(../images_layout/about_slider/tabs_bg.jpg) no-repeat right top;
+ font-family: sans-serif;
+}
+
+#about_slider ul {
+ list-style: disc inside none;
+}
+
+#about_slider div {
+ position: absolute;
+ top: 1px;
+ left: 201px;
+ height: 103px;
+ width: 440px;
+ padding: 26px;
+ overflow: hidden;
+}
+
+#about_slider h2 {
+ margin: 0;
+ background: #361F57;
+ background: url(../images_layout/about_slider/tabs.png) left -52px no-repeat;
+ width: 200px;
+ padding-top: 1px;
+}
+
+#about_slider h2.first {
+  background-position: left 0px;
+}
+
+#about_slider h2.last {
+  padding-bottom: 1px;
+  background-position: left -104px;
+}
+
+#about_slider h2 a {
+ display: block;
+ width: 148px;
+ height: 51px;
+ line-height: 51px;
+ font-size: 16px;
+ color: white;
+ text-decoration: none;
+ margin: 0 10px;
+ padding: 0 12px;
+}
+
+#about_slider h2 a:hover {
+ color: #ccc;
+}
+
+#about_slider h2 a:focus {
+ /* for accessibility if you remove the outline you need to "replace" it with some other highlight */
+ outline: none;
+ color: #ccc;
+}
+
+#about_slider h2.selected {
+  background-position: left -209px;
+}
+
+#about_slider h2.selected.first {
+  background-position: left -157px;
+}
+
+#about_slider h2.selected.last {
+  background-position: left -261px;
+}
+
+#about_slider div#tab-mission p {
+ font-size: 14px;
+ line-height: 16px;
+ color: rgb(103, 66, 155);
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}
+
+#about_slider div#tab-mission ul {
+ font-size: 14px;
+ line-height: 16px;
+ color: rgb(103, 66, 155);
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}
+
+
+#about_slider div#tab-vision p {
+ font-size: 26px;
+ line-height: 30px;
+ color: #67429b;
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}
+
+#about_slider div#tab-core-values p {
+ font-size: 14px;
+ line-height: 16px;
+ color: rgb(103, 66, 155);
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}
+
+#about_slider div#tab-core-values ul {
+ font-size: 16px;
+ line-height: 20px;
+ color: #67429b;
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}

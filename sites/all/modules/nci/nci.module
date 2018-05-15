@@ -1,0 +1,467 @@
+<?php
+
+
+function nci_menu() {
+    
+    
+    $items['admin/settings/nci'] = array(
+	'title' => 'NCI XSL Settings',
+	'description' => 'NCI XSL Settings',
+	'page callback' => 'nci_admin',
+	'access arguments' => array('administer nci'),
+	'type' => MENU_NORMAL_ITEM,
+	'file' => 'nci.admin.inc',
+    );
+    
+    $items['admin/settings/nci/upload'] = array(
+	'title' => 'XSL Configuration',
+	'type' => MENU_DEFAULT_LOCAL_TASK,
+	'weight' => 0,
+    );
+    
+     $items['admin/settings/nci/sync'] = array(
+	'title' => 'Sync NCI Data',
+	'description' => 'Sync NCI XML data to local server',
+	'page callback' => 'nci_admin_sync',
+	'access arguments' => array('administer nci'),
+	'type' => MENU_LOCAL_TASK,
+	'file' => 'nci.admin.inc',
+	'weight' => 1,
+    );
+    
+//    $items['admin/settings/nci/cache'] = array(
+//	'title' => 'Cache Settings',
+//	'description' => 'Cache Settings',
+//	'page callback' => 'nci_cache_admin',
+//	'access arguments' => array('administer nci'),
+//	'type' => MENU_LOCAL_TASK,
+//	'file' => 'nci.admin.inc',
+//	'weight' => 1,
+//    );
+    
+//    $items['admin/settings/nci/default-main'] = array(
+//	'title' => 'Default Main Page',
+//	'description' => 'Default Main Page',
+//	'page callback' => 'nci_default_main_page',
+//	'access arguments' => array('administer nci'),
+//	'type' => MENU_LOCAL_TASK,
+//	'file' => 'nci.admin.inc',
+//	'weight' => 2,
+//    );
+    
+//    $items['admin/settings/nci/cache-clear-confirm'] = array(
+//	'title' => 'Clear NCI cache',
+//	'description' => 'Clear NCI cache',
+//	'page callback' => 'nci_cache_clear',
+//	'access arguments' => array('administer nci'),
+//	'type' => MENU_CALLBACK,
+//	'file' => 'nci.admin.inc',
+//    );
+
+    $items['nci_content/list/term/%'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_term_list',
+	'page arguments' => array(3),
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['nci_content/list/summary/%'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_summary_list',
+	'page arguments' => array(3),
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+
+	$items['nci_content/list-all-summary'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_summary_list',
+	'page arguments' => array(3),
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['nci_content/list/glossary/%'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_glossary_list',
+	'page arguments' => array(3),
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['nci_content'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_term_info',
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['summary'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_summary_info',
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['glossary'] = array(
+	'title' => '',
+	'description' => '',
+	'page callback' => 'nci_get_glossary_info',
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+    
+    $items['nci_testpage'] = array(
+	'title' => 'Test Page',
+	'description' => 'For testing',
+	'page callback' => 'nci_main',
+	'access callback' => true,
+	'type' => MENU_CALLBACK,
+    );
+ 
+    return $items;
+}
+
+
+
+function nci_perm() {
+    return array('administer nci');
+}
+
+
+function nci_list_all() {
+    foreach(range('A','Z') as $i) {
+	
+    }
+}
+
+
+function nci_get_term_list($prefix) {
+    if ($prefix == 'all') {
+	
+    }
+    //dd('listing terms...');
+    //dd('prefix is ' . $prefix);
+    $output = '';
+    $result = db_query("SELECT * FROM {nci_terminology} WHERE term like '$prefix%' ORDER BY term");
+    //dd($result);
+    while ($term = db_fetch_object($result)) {
+	//$link = "content?termid=" . $term->termid;
+	$link = "nci_content";
+	$ltext = $term->term;
+	$output .= l($ltext, $link, array('query'=>array('termid'=>$term->termid))) . '<br/>';
+	//$output .= '<a href="/content?termid=' . $term->termid . '">' . $term->term . "</a><br/>";
+	////dd($term);
+    }
+    return $output;
+}
+
+
+function nci_get_summary_list($prefix) {
+    $css_path = drupal_get_path('module', 'nci');
+    drupal_add_css($css_path . '/nci.css');
+    $output = '';
+    if ($prefix == 'all') {
+	$output .= '<div id="summary-index-list">';
+	foreach(range('A','Z') as $i) {
+	    $output .= l($i, 'nci_content/list/summary/' . $i, array('class'=>'summary-index') ) ;
+	    if ($i == 'M') {
+		$output .= '<br/>';
+	    }
+	}
+	$output .= '</div>';
+	return $output;
+    }
+    //dd('listing summaries...');
+    //dd('prefix is ' . $prefix);
+    $result = db_query("SELECT * FROM {nci_summary} WHERE title like '$prefix%' ORDER BY title");
+    //dd($result);
+    $link = "summary";
+    while ($summary = db_fetch_object($result)) {
+	$ltext = $summary->title;
+	$output .= l($ltext, $link, array('query'=>array('summaryid'=>$summary->summaryid))) . '<br/>';
+    }
+    return $output;
+}
+
+
+function nci_get_glossary_info() {
+    //dd('glossary info');
+    $css_path = drupal_get_path('module', 'nci');
+    drupal_add_css($css_path . '/nci.css');
+    $glossaryid = $_GET['glossaryid'];
+    
+    $refarray = str_split($glossaryid);
+    $glossaryfile = '';
+    foreach ($refarray as $i=>$char) {
+        if ($i<8 && $char=='0') {  // leave leading zeroes out
+            continue;
+        }
+        else {
+            $glossaryfile .= $char;
+        }
+    }
+    $glossaryfile .= '.xml';
+    
+    $xmlfilepath = file_directory_path() . '/nci/GlossaryTerm/' . $glossaryfile;
+    $xmlfile = simplexml_load_file($xmlfilepath);
+    $xmlstring = file_get_contents($xmlfilepath);
+    ////dd($xmlstring);
+    //firep($xmlfile, 'xmlfile');
+    //firep($xmlstring, 'xmlfile');
+    
+    $xp = new XsltProcessor();
+    $current_xsl_file = variable_get('nci_glossary_xslt_file', '');
+    //dd($current_xsl_file);
+    
+    $filepath = realpath($current_xsl_file->filepath);
+
+	if (!$current_xsl_file)
+		$filepath = drupal_get_path('module', 'nci') . '/nci_glossary.xsl';
+
+    ////dd($filepath);
+    $xsl = new DomDocument;
+    $xsl->load($filepath, LIBXML_NOCDATA);  // MUST add second param - a documented glitch in the lib doesn't allow disabling of escaping without it
+    ////dd($xsl);
+    $xp->importStylesheet($xsl);
+    $xml_doc = new DomDocument;
+    $xml_doc->loadXML($xmlstring, LIBXML_NOCDATA);
+    
+    if ($html = $xp->transformToXML($xml_doc)) {
+	////dd('transformed');
+	////dd($html);
+	return $html;
+	//return $output;
+    } else {
+	drupal_set_message(t('XSL transformation failed.'), 'error');
+	return 'fail';
+    }
+    
+    return $xmlfilepath . '<br/>' . $current_xsl_file->filepath;
+}
+
+
+
+function nci_get_summary_info() {
+	
+	global $base_url;
+    ////dd('summary info');
+    $css_path = drupal_get_path('module', 'nci');
+    drupal_add_css($css_path . '/nci.css');
+    $termid = $_GET['summaryid'];
+    
+    $refarray = str_split($termid);
+    $termfile = '';
+    foreach ($refarray as $i=>$char) {
+        if ($i<8 && $char=='0') {  // leave leading zeroes out
+            continue;
+        }
+        else {
+            $termfile .= $char;
+        }
+    }
+    $termfile .= '.xml';
+    
+    $xmlfilepath = file_directory_path() . '/nci/Summary/' . $termfile;
+    $xmlfile = simplexml_load_file($xmlfilepath);
+    $xmlstring = file_get_contents($xmlfilepath);
+    ////dd($xmlstring);
+    //firep($xmlfile, 'xmlfile');
+    //firep($xmlstring, 'xmlfile');
+    
+    $xp = new XsltProcessor();
+    $current_xsl_file = variable_get('nci_summary_xslt_file', '');
+    ////dd($current_xsl_file);
+    
+    $filepath = realpath($current_xsl_file->filepath);
+
+	if (!$current_xsl_file)
+		$filepath = drupal_get_path('module', 'nci') . '/nci_summary.xsl';
+
+    ////dd($filepath);
+    $xsl = new DomDocument;
+    $xsl->load($filepath, LIBXML_NOCDATA);  // MUST add second param - a documented glitch in the lib doesn't allow disabling of escaping without it
+    ////dd($xsl);
+    $xp->importStylesheet($xsl);
+    $xml_doc = new DomDocument;
+    $xml_doc->loadXML($xmlstring, LIBXML_NOCDATA);
+    
+    if ($html = $xp->transformToXML($xml_doc)) {
+	////dd('transformed');
+	////dd($html);
+	return str_replace('[site_url]',$base_url. '/' .file_directory_path() . '/nci',$html);
+	//return $output;
+    } else {
+	drupal_set_message(t('XSL transformation failed.'), 'error');
+	return 'fail';
+    }
+    
+    return $xmlfilepath . '<br/>' . $current_xsl_file->filepath;
+}
+
+
+function nci_get_term_info() {
+    $css_path = drupal_get_path('module', 'nci');
+    drupal_add_css($css_path . '/nci.css');
+    $termid = $_GET['termid'];
+    
+    $refarray = str_split($termid);
+    $termfile = '';
+    foreach ($refarray as $i=>$char) {
+        if ($i<8 && $char=='0') {  // leave leading zeroes out
+            continue;
+        }
+        else {
+            $termfile .= $char;
+        }
+    }
+    $termfile .= '.xml';
+    
+    $xmlfilepath = file_directory_path() . '/nci/Terminology/' . $termfile;
+    $xmlfile = simplexml_load_file($xmlfilepath);
+    $xmlstring = file_get_contents($xmlfilepath);
+    ////dd($xmlstring);
+    //firep($xmlfile, 'xmlfile');
+    //firep($xmlstring, 'xmlfile');
+    
+    $xp = new XsltProcessor();
+    $current_xsl_file = variable_get('nci_term_xslt_file', '');
+    
+    $filepath = realpath($current_xsl_file->filepath);
+
+	if (!$current_xsl_file)
+		$filepath = drupal_get_path('module', 'nci') . '/nci.xsl';
+
+    ////dd($filepath);
+    $xsl = new DomDocument;
+    $xsl->load($filepath, LIBXML_NOCDATA);  // MUST add second param - a documented glitch in the lib doesn't allow disabling of escaping without it
+    ////dd($xsl);
+    $xp->importStylesheet($xsl);
+    $xml_doc = new DomDocument;
+    $xml_doc->loadXML($xmlstring, LIBXML_NOCDATA);
+    
+    if ($html = $xp->transformToXML($xml_doc)) {
+	////dd('transformed');
+	////dd($html);
+	return $html;
+	//return $output;
+    } else {
+	drupal_set_message(t('XSL transformation failed.'), 'error');
+	return 'fail';
+    }
+    
+    return $xmlfilepath . '<br/>' . $current_xsl_file->filepath;
+}
+
+
+
+function nci_get_article() {
+    $use_tmpl = variable_get('nci_use_template', '');
+    ////dd('use tmpl?');
+    ////dd($use_tmpl);
+    
+    $css_path = drupal_get_path('module', 'nci');
+    drupal_add_css($css_path . '/nci.css');
+    $chunkiid = $_GET['ChunkIID'];
+    ////dd('in the article function...');
+    ////dd($chunkiid);
+    // get from cache if it's in there
+    $html = cache_get($chunkiid, 'cache_nci');
+    ////dd($html);
+    if ($html->data && time()<$html->expire && $use_tmpl==0) {  // if past expiration date, don't use cached version. 
+	////dd('returning cached version...');
+	////dd($html);
+	return $html->data;
+    }
+    // otherwise, pull from web service
+    $tok = variable_get('nci_web_service_token', '');
+    $wsdl = variable_get('nci_wsdl', '');
+    if ( $wsdl == '' ) {
+	drupal_set_message(t('No WSDL defined.'), 'error');
+	return '';
+    }
+    $client = new SoapClient($wsdl);
+    $article = $client->GetHgXML(array('Token'=>$tok, 'ChunkIID' => $chunkiid));
+    ////dd($article);
+    $output = $article->GetHgXMLResult->any;
+    ////dd($output);
+    $xml = simplexml_load_string($output);
+    ////dd($xml);
+    ////dd($xml->xpath("ArticleBody/Section/SectionHeader"));
+    
+    if ($use_tmpl == 1) {
+	////dd('using tmpl');
+	return theme('nci-article', $xml);
+    }
+    
+    // do the XSL transformation
+    $xp = new XsltProcessor();
+    $current_xsl_file = variable_get('nci_xslt_file', '');
+
+	$filepath = realpath($current_xsl_file->filepath);	
+	
+	if (!$current_xsl_file)
+		$filepath = drupal_get_path('module', 'nci') . '/nci.xsl';
+
+    ////dd($current_xsl_file->filepath);
+
+    ////dd($filepath);
+    $xsl = new DomDocument;
+    $xsl->load($filepath, LIBXML_NOCDATA);  // MUST add second param - a documented glitch in the lib doesn't allow disabling of escaping without it
+    ////dd($xsl);
+    $xp->importStylesheet($xsl);
+    $xml_doc = new DomDocument;
+    $xml_doc->loadXML($article->GetHgXMLResult->any, LIBXML_NOCDATA);
+    
+    ////dd($xml_doc);
+    ////dd($article->GetHgXMLResult->any);
+    
+    if ($html = $xp->transformToXML($xml_doc)) {
+	////dd('transformed');
+	////dd($html);
+	if ( is_numeric($chunkiid) ) {
+	    //_cache_article($chunkiid, $output);
+	    _cache_nci_article($chunkiid, $html);
+	}
+	////dd('returning html...');
+	return $html;
+	//return $output;
+    } else {
+	drupal_set_message(t('XSL transformation failed.'), 'error');
+	return 'fail';
+    }
+    return 'done.';
+}
+
+
+function nci_theme() {
+    return array(
+       'nci-article' => array(
+            'template' => 'tpl/nci-article',
+            'arguments' => array('xml'=>$xml),
+        ),
+    );
+}
+
+
+function _cache_nci_article($chunkiid, $html) {
+    ////dd("caching article with chunkiid $chunkiid");
+    $oneday = (60*60*24);
+    $cache_time = variable_get('nci_cache_time', '1');
+    cache_set($chunkiid, $html, 'cache_nci', time()+($cache_time*$oneday));  // cache for a day
+    //cache_set($chunkiid, $html, 'cache_nci', time()+(60));
+}
+
+
+
+
+function nci_main() {
+    return "Great success!";
+}

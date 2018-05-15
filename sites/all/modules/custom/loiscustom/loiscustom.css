@@ -1,0 +1,49 @@
+a:focus { -moz-outline-style: none; border: none; outline: none; }
+
+div.calendar-calendar ul.links { height: 37px; }
+div.calendar-calendar ul.links li { float: left; }
+div.calendar-calendar ul.links li a  { width: 100px; height: 29px;  }
+div.calendar-calendar ul.links li.calendar-event-add { width: 100px; height: 27px; float: right; }
+//div.calendar-calendar ul.links li.calendar-event-add a { display: block; background: url(images/calendar/add-event-100w.png) no-repeat; text-indent: -10000in; }
+//div.calendar-calendar ul.links li.calendar-year-view a { display: block; background: url(images/calendar/year-100w.png) no-repeat; text-indent: -10000in; }
+//div.calendar-calendar ul.links li.calendar-month-view a { display: block; background: url(images/calendar/month-100w.png) no-repeat; text-indent: -10000in; }
+//div.calendar-calendar ul.links li.calendar-week-view a { display: block; background: url(images/calendar/week-100w.png) no-repeat; text-indent: -10000in; }
+//div.calendar-calendar ul.links li.calendar-day-view a { display: block; background: url(images/calendar/day-100w.png) no-repeat; text-indent: -10000in; }
+div.calendar-calendar ul.links li a:hover { background-position: 2px 2px; }
+
+.calendar-calendar td .inner div.calendar div { line-height: 1.3em; }
+
+.calendar-calendar td .inner div.calendar div, .calendar-calendar td .inner div.calendar div a { background: #99CCCC; color: black; }
+
+div.calendar-calendar div.stripe {  }
+
+.cal-clear { clear: both; }
+
+/* form alterations */
+#edit-field-post-event-nid-nid-wrapper { display: none; }
+//form.loisform-client-form { display: none; }
+div.node div.field { margin-bottom: 10px; }
+div.node form.loisform-client-form { background: #dddddd; padding: 10px; }
+div.node-form div.date-repeat-generate-nodes  { display:  none; }
+ul.primary li a { border: 1px solid black !important; }
+#edit-signup-form-data-Phone-wrapper { display: none; }
+div#content_main div.calendar-calendar ul { margin: 0; padding: 0; }
+div#content_main div.calendar-calendar ul li { border: 1px solid #333333; margin-right: 10px; }
+div#content_main div.calendar-calendar ul li:hover { background-color: #cccccc; }
+div#content_main div.calendar-calendar ul li a:hover { text-decoration: none; }
+div#content_main div.calendar-calendar { margin-top: 10px; }
+
+body.node-type-calendar-event .node { background-color: white; padding: 6px;  }
+body.node-type-calendar-event .node div.terms { display: none; }
+body.node-type-calendar-event .node .field-label-inline-first, body.node-type-calendar-event .node .field-label { color: #000000; }
+body.node-type-calendar-event .node .field-item { padding: 5px 0; }
+body.node-type-calendar-event .node .field-label { padding: 5px 0; }
+body.node-type-calendar-event .node #signup-form { margin: 10px 0; background-color: #cccccc; padding: 5px;  }
+body.node-type-calendar-event .node .form-item { margin: 0; }
+body.node-type-calendar-event .node .form-item label { color: #000000; }
+body.node-type-calendar-event .node .loisform-client-form { margin-top: 10px; }
+
+#lois-cert { border: 1px solid black; padding: 5px; text-align: center; }
+.lois-cert-official { font-family: Helvetica Nue, "Trebuchet MS", Tahoma; font-size: 18px;  font-weight: bold; }
+.cert-title { font-style: italic; font-size: 14px; }
+ .cert-name { font-weight: bold; font-style: italic; }

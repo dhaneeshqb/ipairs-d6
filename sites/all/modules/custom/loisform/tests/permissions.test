@@ -1,0 +1,67 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Loisform module permission tests.
+ */
+
+include_once(dirname(__FILE__) . '/loisform.test');
+
+class LoisformPermissionsTestCase extends LoisformTestCase {
+  /**
+   * Implementation of getInfo().
+   */
+  public static function getInfo() {
+    return array(
+      'name' => t('Loisform permissions'),
+      'description' => t('Create loisforms and check editing and access permissions.'),
+      'group' => t('Loisform'),
+    );
+  }
+
+  /**
+   * Implementation of setUp().
+   */
+  function setUp() {
+    parent::setUp();
+  }
+
+  /**
+   * Implementation of tearDown().
+   */
+  function tearDown() {
+    parent::tearDown();
+  }
+
+  /**
+   * Create a loisform node in which authenticated users have access to submit.
+  */
+  function testLoisformSubmitAccess() {
+    $this->loisformReset();
+    $node = $this->testLoisformForm();
+    $node->loisform['roles'] = array(2);
+    node_save($node);
+
+    // Test that the authenticated user is able to access.
+    $this->drupalLogin($this->loisform_users['userAccess']);
+    $this->drupalGet('node/' . $node->nid);
+    $this->assertText($node->body, t('Loisform node created and accessible to authenticated users at !url', array('!url' => 'node/' . $node->nid)), t('Loisform'));
+
+    // Confirm that the submission has been created.
+    $this->drupalPost(NULL, array(), 'Submit');
+    $this->assertText($node->loisform['confirmation'], t('Confirmation message "@confirmation" received.', array('@confirmation' => $node->loisform['confirmation'])), t('Loisform'));
+    $this->drupalLogout();
+
+    // The anonymous user should not be able to submit.
+    $this->drupalGet('node/' . $node->nid);
+    // Note: Should be: You must <a href="!login">login</a> or <a href="!register">register</a> to view this form.
+    // Something in SimpleTest isn't handling the string correctly.
+    $this->assertText('to view this form.', t('Anonymous user is not allowed to submit form.'), t('Loisform'));
+  }
+
+  /**
+   * Create loisform
+   */
+
+}

@@ -1,0 +1,100 @@
+<?php
+// $Id: date_repeat_presets.module,v 1.1 2010/11/13 23:17:10 chaps2 Exp $
+
+/**
+ * @file
+ * This module enhances the standard repeating date functionality offered by
+ * the Date and Date Repeat API modules by providing preset date repeat rules.
+ *
+ * The module supports two types of preset:
+ * - Select a preset repeat from a list. (E.g. every year, every month, every week).
+ *   Up to 5 configurable preset repeat rules are allowed as well as the options
+ *   to not repeat or, if configured, to specify a custom repeat rule via the
+ *   standard form. This is similar to the way Apple's iCal does it.
+ * - A single configurable preset rule which is either applied automatically
+ *   for a specialised date field (e.g. your birthday, anniversary etc) or via
+ *   a checkbox for a more general "is this an annual event" type field.
+ */
+
+/**
+ * Implementation of hook_theme().
+ */
+function date_repeat_presets_theme() {
+  return array(
+    'date_repeat_presets_presets' => array(
+      'arguments' => array('element' => NULL)),
+  );
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function date_repeat_presets_menu() {
+  $items = array();
+
+  $items['date_repeat_presets/expand'] = array(
+    'page callback' => '_date_repeat_presets_expand_js',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('administer content types'),
+    'file' => 'date_repeat_presets.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_form_alter(). Alter node forms and the date widget admin form.
+ */
+function date_repeat_presets_form_alter(&$form, $form_state, $form_id) {
+  if ($form['#id'] == 'node-form') {
+    module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets');
+    _date_repeat_presets_alter_node_form($form, $form_state);
+  }
+  elseif ($form_id == 'content_field_edit_form') {
+    // only alter date forms that have the repeat date flag set
+    if (date_is_repeat_field($form['#field'])) {
+      module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets.admin');
+      _date_repeat_presets_admin_form_alter($form, $form_state, $form_id);
+    }
+  }
+}
+
+/**
+ * An after_build callback for the node form.
+ */
+function date_repeat_presets_after_build($form, &$form_state) {
+  module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets');
+  return _date_repeat_presets_after_build($form, $form_state);
+}
+
+/**
+ * Friendly version of date_widget_validate() in date_elements.inc. See the after_build callback above.
+ */
+function date_repeat_presets_validate($element, &$form_state) {
+  module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets');
+  return _date_repeat_presets_validate($element, $form_state);
+}
+
+/**
+ * Extra validation for the rrule on the node form. See the after_build callback.
+ */
+function date_repeat_presets_rrule_validate($element, &$form_state) {
+  module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets');
+  return _date_repeat_presets_rrule_validate($element, $form_state);
+}
+
+/**
+ * Bespoke submit handler added to the date repeat admin form.
+ */
+function date_repeat_presets_admin_form_submit($form, &$form_state) {
+  module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets.admin');
+  return _date_repeat_presets_admin_form_submit($form, $form_state);
+}
+
+/**
+ * #after_build function used in admin form.
+ */
+function date_repeat_presets_admin_repeat_collapsed_after_build($form, &$form_state) {
+  module_load_include('inc', 'date_repeat_presets', 'date_repeat_presets.admin');
+  return _date_repeat_presets_admin_repeat_collapsed_after_build($form, $form_state);
+}

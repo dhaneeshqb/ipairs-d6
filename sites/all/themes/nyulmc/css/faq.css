@@ -1,0 +1,19 @@
+/* Styles for the FAQ page. Not really used anywhere else */
+div.som-body { border-bottom: 1px solid #c2c2c2; padding-bottom: 20px; font-family: Arial, sans-serif; color: #333333; line-height: 20px; }
+div.som-body p { color: #333333; }
+.som-question-bold { font-weight: normal; color: #000000; padding-right: 5px; }
+
+div.som-qa { padding: 10px 0; border-bottom: 1px solid #c2c2c2; position: relative; }
+div.som-faq-arrow { position: absolute; right: 3px; top: 15px;  }
+
+div.som-question { font-family: Georgia, serif; font-size: 16px; line-height: 18px; }
+div.som-question a { color: #063964; }
+div.som-qa div.som-answer { padding-top: 15px; padding-left: 40px; display: none; font-family: Arial, sans-serif; color: #333333; line-height: 20px; }
+
+body.node-type-faq-page #content div.column_main {
+    padding-left: 16px;
+    width: 688px;
+}
+
+body.node-type-faq-page #content { height: auto; min-height: 0; }
+#footer { position: relative; }

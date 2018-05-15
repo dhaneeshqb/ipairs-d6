@@ -1,0 +1,421 @@
+
+/* Homepage Styles */
+
+#content, #content div.wrapper {
+ min-height: 0;
+}
+
+#utilityNavList .first {
+ display: block;
+}
+
+/* See the similar in landing.css */
+
+div.display-sections {
+ text-align: center;
+ background: url(../images_layout/homepage/display-sections-seperator.gif) repeat-y center top transparent;
+ overflow: visible;
+ margin-top: 42px;
+ width: 100%;
+}
+
+div.display-sections div.row-item {
+ display: inline-block;
+ vertical-align: top;
+ width: 261px;
+ padding: 0;
+ margin: -42px 25px 0 25px;
+ zoom: 1;
+ *display: inline;
+}
+
+div.display-sections div.row-item h2 {
+ text-align: center;
+ font-size: 24px;
+ height: 24px;
+ margin: 8px 0 0;
+ padding: 0;
+ overflow: hidden;
+ padding-bottom:5px;
+}
+
+div.display-sections div.row-item h2 a {
+ color: #333;
+}
+
+div.display-sections div.row-item h2 a span {
+ color: #999;
+}
+
+div.display-sections div.link_block {
+ margin: 10px 0 0 0;
+ text-align: left;
+}
+
+div.display-sections div.link_block a.section-image
+{
+ padding-bottom: 12px;
+}
+
+div.display-sections div.link_block a.section-image,
+div.display-sections div.link_block a.section-image img
+{
+ display: block;
+}
+
+div.display-sections div.link_block a.section-image img {
+ border: 1px solid #fff;
+}
+
+div.display-sections div.link_block a.section-image:hover img {
+ border: 1px solid #ccc;
+}
+
+div.display-sections div.link_block p {
+ color: #333;
+}
+
+div.display-sections div.link_block.last {
+ border: none;
+}
+
+div.display-sections div.link_block div.field-item {
+ font-size: 13px;
+ margin: 0 0 8px 0;
+ padding: 0 0 0 0;
+}
+
+div.display-sections div.link_block div.field-item a {
+ padding: 0 0 0 16px;
+ background: url(../images_layout/raquo.gif) no-repeat left center !important; 
+}
+
+/* from the old department.css */
+/* Main Column Styles */
+
+div#content_main {
+ width: 689px;
+ padding-right: 16px;
+}
+
+div#content_main h2.field-landing-teaser {
+ font-size: 16px;
+ line-height: 24px;
+ padding: 0 0 10px !important;
+}
+
+/* Right Column Styles */
+
+div#column_right_content {
+ width: 227px;
+ height: auto !important;
+ height: 500px;
+ background: url(../images_layout/rt_col_news/bg_gradient.jpg) left top no-repeat;
+
+ background: url(../images_layout/rt_col_news/bg_gradient.jpg) left top repeat\9; 
+
+
+ /*
+ background-color: #f0f0f0;
+ border: 1px solid #cccccc;
+ */
+ padding: 20px;
+}
+
+div#column_right_content a { background-color: transparent; }
+
+div#column_right_content_bottom {
+ width: 267px;
+ height: 3px;
+ background: url(../images_layout/rt_col_news/bg_gradient_bttm.jpg) left top no-repeat;
+}
+
+/* View: Display News */
+div.display-department-news {
+	margin-bottom: 1em;
+}
+
+div.display-news ul, 
+div.display-department-news ul {
+ list-style: none;
+ margin: 10px 0 0 0;
+ padding: 0;
+ border-bottom: 1px dotted #999;
+}
+
+div.display-news ul li, 
+div.display-department-news ul li {
+ border-bottom: 1px dotted #999;
+ margin: 0 0 0 0;
+ padding: 10px 0;
+ overflow: auto;
+}
+
+div.display-news ul li img, 
+div.display-department-news ul li img {
+ float: left;
+ display: inline;
+ padding: 0 10px 0 0;
+}
+
+div.display-news ul li a, 
+div.display-department-news ul li a {
+ color: #1E8AB1;
+}
+
+div.display-news ul li.last, 
+div.display-department-news ul li.last {
+ border: none;
+}
+
+
+div.display-news-footer, div.display-news-footer a,
+div.display-department-news-footer, div.display-department-news-footer a  {
+ text-align: right;
+ margin: 10px 0;
+ color: #093B64;
+}
+
+div.display-buttons ul li {
+ border-bottom: 1px dotted #999;
+ padding: 10px 0;
+}
+
+div.display-news ul li, div.sidebar_item ul li {
+    border-bottom: 1px dotted #999999;
+    margin: 0;
+    overflow: auto;
+    padding: 10px 0;
+}
+
+
+/* View: Display Buckets */
+
+div.display-buckets {
+ background: url(../images_layout/display-buckets-seperator.gif) repeat-y left top transparent;
+ overflow: visible;
+ margin-top: 46px;
+ padding-bottom: 16px;
+
+}
+
+div.display-buckets div.row-item {
+ display: inline-block;
+ *display: inline;
+ margin: -46px 0 0 36px;
+ padding: 0;
+ vertical-align: top;
+ width: 196px; /* 194 + 2 for the image border */
+ zoom: 1;
+ position: relative;
+}
+
+
+
+div.display-buckets div.row-item.first {
+ margin: -46px 0 0 0;
+}
+
+div.display-buckets div.row-item h2 {
+ text-align: center;
+ font-size: 20px;
+ line-height: 20px;
+ height: 40px;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ padding-bottom: 3px;
+}
+
+div.display-buckets div.row-item h2 a {
+ color: #333;
+}
+
+div.display-buckets div.row-item h2 a span {
+ color: #999;
+}
+
+div.display-buckets div.link_block {
+ margin: 4px 0 0 0;
+ text-align: left;
+}
+
+div.display-buckets div.link_block img.imagefield
+{
+ margin-bottom: 12px;
+}
+
+div.display-buckets div.link_block a.bucket-image,
+div.display-buckets div.link_block a.bucket-image img
+{
+ display: block;
+}
+
+div.display-buckets div.link_block a.bucket-image img {
+ border: 1px solid #fff;
+}
+
+div.display-buckets div.link_block a.bucket-image:hover img {
+ border: 1px solid #ccc;
+}
+
+div.display-buckets div.link_block p {
+ color: #333;
+}
+
+div.display-buckets div.link_block.last {
+ border: none;
+}
+
+div.display-buckets ul {
+ list-style: disc outside url("../images_layout/raquo.gif");
+ margin-left: 16px;
+}
+
+div.display-buckets ul li a {
+ color: #532599;
+ font-size: 100%;
+}
+
+div.display-buckets div.link_block div.field-item {
+ font-size: 13px;
+ margin: 0 0 8px 8px;
+ padding: 0 0 0 12px;
+ background: url(../images_layout/subnav_bullet_arrow.gif) no-repeat left center; 
+}
+
+/* Leadership Department List Pages */
+
+div.content div.dept_list h2 {
+ width: 100%;
+ margin: 0 0 20px 0;
+ padding: 0 0 8px 0;
+ border-bottom: 3px solid #3B2263;
+}
+
+div.content div.dept_list ul.list_left, div.content div.dept_list ul.list_right {
+ float: left;
+ display: inline;
+ width: 335px;
+ padding: 0 0 20px 0;
+}
+
+div.content div.dept_list a {
+ display: block;
+ font-weight: bold;
+}
+
+/* Important Numbers */
+
+div#important_numbers {
+ width: 240px;
+ margin: 0 0 20px 10px;
+ background-color: #FFF;
+ border: 1px solid #CCC;
+}
+
+div#important_numbers h2 {
+ margin: 0 0 0 20px;
+ padding: 20px 0;
+ color: #6A3B11;
+}
+
+div#important_numbers h3 {
+ padding: 3px 10px;
+ margin: 0 0 15px 0;
+ font-size: 14px;
+ font-weight: bold;
+ color: #333;
+ border-top: 1px solid #CCC;
+ border-bottom: 1px solid #CCC;
+}
+
+div#important_numbers h4 {
+ padding: 0 10px 20px 12px;
+ font-size: 13px;
+ color: #515151;
+}
+
+/* *** For slider *** */
+.department-slider  {
+  height: 238px;
+  margin: 0;
+  position: relative;
+  width: 705px;
+}
+.department-slider .slider-wrapper {
+  height: 238px;
+  left: 0;
+  margin: 0;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: 705px;
+}
+.slider-wrapper li {
+	background-color:#000000 !important;	
+}
+.department-slider .slider-wrapper ul {
+	background-color:#000000 !important;	
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 32700px;
+}
+.department-slider .slider-wrapper ul li {
+  display: block;
+  float: left;
+  height: 238px;
+  margin: 0;
+  padding: 0;
+  width: 705px;
+}
+.department-slider .arrow {
+  display: none;
+}
+.department-slider .forward {
+}
+.department-slider .back {
+}
+.department-slider .forward:hover {
+}
+.department-slider .back:hover {
+}
+
+.department-slider #thumbNav {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.department-slider #thumbNav a {
+  display: inline-block;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: url(../images_layout/department_slider/square.png) no-repeat;
+  _background: url(../images_layout/department_slider/square.gif) no-repeat;
+  color: white;
+  font: 11px/21px arial;
+  height: 22px;
+  width: 20px;
+  margin: 0 .5em 0 0;
+  text-align: center;
+}
+.department-slider #thumbNav a:hover {
+  color: black;
+  text-decoration: none;
+}
+.department-slider #thumbNav a.cur {
+  color: black;
+}
+.start-stop {
+  display: none;
+}
+.start-stop.playing {
+}
+.start-stop:hover {
+}

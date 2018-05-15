@@ -1,0 +1,156 @@
+
+/* Front Matter */
+ 
+div#hg_content div.FrontMatter { }
+
+div#hg_content div.FrontMatter h1.Title {
+ /* Copied from H1 */
+ color: #6A3B11;
+ font-family: SortsMillGoudy,Georgia,"Times New Roman",Times,Serif;
+ font-size: 30px;
+ font-weight: normal;
+ line-height: 30px;
+ /* Unique to this module */
+ padding-bottom: 45px;
+}
+
+div#hg_content div.FrontMatter h2.subhead {
+ /* Copied from H2 */
+ color: #333333;
+ font-family: SortsMillGoudy,Georgia,"Times New Roman",Times,Serif;
+ font-size: 20px;
+ font-weight: normal;
+ line-height: 24px;
+ /* Unique to this module */
+ width: 500px;
+ float: left;
+}
+
+div#hg_content div.FrontMatter p.Byline {
+ width: 430px;
+ float: right;
+ text-align: right;
+}
+
+/* Tools */
+
+div#hg_content div.Tools {
+ border-top: 3px solid #333333;
+ clear: both;
+ margin: 7px 0 0 0;
+ padding: 7px 0 0 0;
+ text-align: right;
+}
+
+/* Article Body */
+
+div#hg_content div.ArticleBody {
+ background-color: #FFFFFF;
+ border: 1px solid #CCCCCC;
+ margin: 50px 0 20px 0;
+ padding: 25px 50px;
+} 
+
+div#hg_content div.ArticleBody ul.LinkList {
+ padding: 0 0 0 12px;
+}
+
+div#hg_content div.ArticleBody ul.LinkList li p {
+ margin: 0;
+ padding: 0;
+}
+
+
+/* Article Body : Anchor Menu */
+
+div#hg_content div.ArticleBody div.anchor_menu {
+ width: 100%;
+ overflow: auto;
+}
+
+div#hg_content div.ArticleBody div.anchor_menu div.anchor_menu_items ul li {
+ border-right: 1px solid #333333;
+ display: inline;
+ float: left;
+ margin: 0 10px 0 0;
+ padding: 0 10px 0 0;
+} 
+
+div#hg_content div.ArticleBody div.anchor_menu div.anchor_menu_items ul li a {
+ font-weight: bold;
+} 
+
+div#hg_content div.ArticleBody div.anchor_menu div.anchor_menu_items ul li.last {
+ border: medium none;
+} 
+
+/* Article Body : Sections */
+
+div#hg_content div.ArticleBody div.Section {
+ clear: both;
+}
+
+div#hg_content div.ArticleBody div.Section div.subhead {
+ /* Copied from H2 */
+ color: #333333;
+ font-family: SortsMillGoudy,Georgia,"Times New Roman",Times,Serif;
+ font-size: 20px;
+ font-weight: normal;
+ line-height: 24px;
+}
+
+div#hg_content div.ArticleBody div.Section div.Figure {
+ text-align: center;
+ float: right;
+} 
+
+
+div#hg_content div.ArticleBody div.Section div.Figure div.subhead {
+ color: #333333;
+ font: normal normal normal 12px/135% Arial, Helvetica, sans-serif;
+ font-weight: bold;
+} 
+
+/* Article Body : Back Matter */
+
+div#hg_content div.BackMatter p.LastReview {
+ font-weight: bold;
+}
+
+div#hg_content div.BackMatter ul.EBSCOLinks {
+ width: 100%;
+ overflow: auto;
+}
+
+div#hg_content div.BackMatter ul.EBSCOLinks li {
+ border-right: 1px solid #333333;
+ display: inline;
+ float: left;
+ margin: 0 10px 0 0;
+ padding: 0 10px 0 0;
+} 
+
+div#hg_content div.BackMatter ul.EBSCOLinks li a {
+ font-weight: bold;
+} 
+
+div#hg_content div.BackMatter ul.EBSCOLinks li.last {
+ border: medium none;
+} 
+
+
+/* Article Body : Misc */
+
+div#hg_content div.ArticleBody hr.dashed_div {
+ display: none;
+} 
+
+div#hg_content div.ArticleBody ul.BulletList {
+ padding: 0 0 0 12px;
+} 
+
+div#hg_content div.ArticleBody ul.BulletList li {
+ margin: 0 0 4px 0;
+ padding: 0 0 0 12px;
+ background: url(../images_layout/subnav_bullet_arrow.gif) no-repeat 0px 6px;	
+} 

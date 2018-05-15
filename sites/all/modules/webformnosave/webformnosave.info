@@ -1,0 +1,6 @@
+; $Id$
+name = Webform NoSave
+description = Disable the storage of Webforms in database
+core = 6.x
+version = 6.x-1.0
+dependencies[] = webform

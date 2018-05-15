@@ -1,0 +1,10 @@
+; $Id$
+name = NYULMC webform redirect
+description = NYULMC webform redirect for ipairs site 
+version = "6.x-2.4"
+project = "nyulmc_webform_redirect"
+core = "6.x"
+php = "5.2.6"
+package = NYU
+
+dependencies[] = webform

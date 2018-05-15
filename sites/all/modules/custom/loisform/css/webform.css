@@ -1,0 +1,14 @@
+/* $Id: loisform.css,v 1.1.2.3 2010/10/17 18:53:09 quicksketch Exp $ */
+
+/**
+ * Front-end styling for the display of loisforms.
+ */
+
+input.loisform-calendar {
+  padding: 3px;
+  vertical-align: top;
+}
+.loisform-container-inline div,
+.loisform-container-inline div.form-item {
+  display: inline;
+}

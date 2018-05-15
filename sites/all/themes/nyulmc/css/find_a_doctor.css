@@ -1,0 +1,609 @@
+/* Main Search Page */
+
+div.find_a_doctor {
+	width: 961px;
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+	background: url(../images_layout/find_a_doctor/bg_gradient.jpg) left top no-repeat;
+	border: 1px solid #CCC;
+}
+
+div.search_landing, div.search_by_name {
+	float: left; 
+	display: inline;
+	width: 400px;
+	border-right: 1px solid #CCC;
+	margin: 43px 0 0 100px;
+	padding: 0 0 15px 0;
+}
+
+div.search_landing ul {
+	margin: 40px 0 0 0;
+}
+
+div.search_landing ul li {
+	width: 303px;
+	height: 43px;
+	margin: 0 0 7px 0;
+}
+
+div.search_landing ul li a {
+	display: block;
+	background: url(../images_layout/find_a_doctor/bg_bttns_start_search.jpg) left top no-repeat;
+	line-height: 43px;
+	padding-left: 70px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+div.search_landing ul li a#name 						{ background-position: 0 0; }
+div.search_landing ul li a#name:hover 			{ background-position: -305px 0; }
+div.search_landing ul li a#specialty 				{ background-position: 0 -43px; }
+div.search_landing ul li a#specialty:hover 	{ background-position: -305px -43px; }
+div.search_landing ul li a#insurance 				{ background-position: 0 -86px; }
+div.search_landing ul li a#insurance:hover 	{ background-position: -305px -86px; }
+
+/* Clinician Spotlight */
+
+div.spotlight {
+	float: left; 
+	display: inline;
+	margin: 43px 0 0 25px;
+}
+
+div.spotlight div {
+	float: left; 
+	display: inline;
+	margin: 15px 20px 0 0;
+}
+
+div.spotlight div img {
+	float: left; 
+	display: inline;
+}
+
+div.spotlight div div {
+	margin: 10px 0 0 15px;
+}
+
+div.spotlight div div h3 {
+	font-size: 16px;
+	color: #333;
+	margin: 0 0 10px 0;
+}
+
+div.spotlight div div span {
+	display: block;
+	width: 150px;
+	margin-bottom: 65px;
+}
+
+div.spotlight div div a {
+	display: block;
+}
+
+/* Search by Name */
+
+div.search_by_name {
+	width: 450px;
+}
+
+div.search_by_name h1 {
+	margin: 0 0 15px 0;
+}
+
+div.search_by_name h2 {
+	margin: 0 0 10px 0;
+}
+
+div.item_findbyname {margin-left: 40px;}
+
+div.item_findbyletter.column_right {
+	margin: 43px 0 0 25px !important;
+}
+
+div.item_findbyletter h2 {
+	margin: 0 0 25px 0;
+}
+
+div.name_search_section div.alpha_links {
+	float: left; 
+	display: inline;
+}
+
+div.name_search_section div.alpha_links a {
+	font-size: 22px;
+	color: #522499;
+	display: inline-block;
+	width: 25px;
+	height: 40px;
+}
+
+/* Search by Specialty */
+
+div.search_by_specialty {
+	margin: 35px 0 0 35px;
+}
+
+div.search_by_specialty div.results_column {
+	float: left;
+	display: inline;
+	width: 250px;
+	padding: 30px 65px 0 0;
+}
+
+div.search_by_specialty div.results_column.last {
+	padding: 30px 0 0 0;
+}
+
+div.search_by_specialty div.results_column h1 {
+	margin: 0 0 10px 0;
+	padding: 0 0 3px 0;
+	font-size: 24px;
+	color: #333;
+	border-bottom: 2px solid #522499;
+}
+
+div.search_by_specialty div.results_column ul {
+	margin: 0 0 20px 0;
+}
+
+div.search_by_specialty div.results_column ul li {
+	line-height: 24px;
+}
+
+/* results page */
+
+div#results_column {
+	float:left;
+	width: 637px;
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+	border: 1px solid #CCC;
+	background-color: #F0EFED;
+	padding: 28px 0 20px 10px;
+}
+
+div#results_column h1 {
+	padding: 0 15px 25px 15px;
+}
+
+div#results_column .quantity {
+	font-size: 48px;
+}
+
+div#results_column ul#fad_physicians {
+	padding: 0 15px 0 15px;
+}
+
+div#results_column ul#fad_physicians li {
+	min-height: 83px;
+	height: auto !important;
+	height: 83px; 
+	border-top: 1px solid #CCCCCC;
+	padding: 7px 0 0 0;
+	margin: 7px 0 0 0;
+	float: left;
+	width: 610px;
+}
+
+div#results_column ul#fad_physicians li.last {
+	padding-bottom: 7px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+div#results_column ul#fad_physicians li div.listwrapper {
+	min-height: 115px;
+	height: auto !important;
+	height: 115px;
+	background-color: #DDDDDD;
+	padding: 5px 0 0 0;
+}
+
+div#results_column ul#fad_physicians li .thumb {
+	float: left;
+	display: inline;
+	padding: 5px 5px 0 10px;
+}
+
+div#results_column ul#fad_physicians li .info {
+	float: left;
+	display: inline;
+	padding: 0 5px 5px 0;
+	margin-left: 25px;
+}
+
+div#results_column ul#fad_physicians li .doctor_name {
+	padding: 4px 0 5px 0;
+	font-weight: bold;
+	font-size: 13px;
+	color: #043964;
+}
+
+div#results_column ul#fad_physicians li a:hover .doctor_name {
+	text-decoration: underline;
+}
+
+div#results_column ul#fad_physicians li a .info span {
+	display: inline-block;
+	color: #333;
+	width: 300px;
+}
+
+/* Compare */
+
+div#results_column div.compare_box {
+	float: right;
+	display: inline;
+	margin: 40px 20px 0 0;
+	color: #333;
+}
+
+div#results_column div.compare_box input {
+	margin: 0 5px 0 0;
+}
+
+div#results_column div.view_comparison {
+	float: right;
+	display: inline;
+	margin: 20px 10px 0 0;
+	text-align: right;
+}
+
+div#results_column div.view_comparison small {
+	padding: 5px 0 0 0;
+	display: block;
+	font-size: 11px;
+	color: #666;
+}
+
+/* Compare Physican 3-Up */
+
+div#phys_comp {
+	float:left;
+	display: inline;
+	width: 956px;
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+	border: 1px solid #CCC;
+	background-color: #F0EFED;
+	padding: 28px 0 20px 40px;
+	color: #333;
+}
+
+div#phys_comp h1 {
+	padding: 0 0 40px 0;
+}
+
+div#phys_comp div {
+	float: left;
+	display: inline;
+	width: 240px;
+	padding: 0 45px 0 0;
+	margin: 0 45px 30px 0;
+	border-right: 1px solid #CCC;
+}
+
+div#phys_comp div.last{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#phys_comp img {
+	padding: 0 0 25px 0;
+}
+
+div#phys_comp div h2 {
+	padding: 0 0 25px 0;
+}
+
+div#phys_comp div ul {
+	line-height: 20px;
+	padding: 0 0 20px 0;
+}
+
+/* Faceted filters on right */
+
+div#results_filters {
+	float: left; 
+	display: inline;
+	width: 309px;
+	padding: 0 0 0 20px;
+}
+
+div#results_filters h1 {
+	padding: 0 15px 25px 8px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 25px;
+	color: #242424;
+}
+
+div#results_filters h3 {
+	padding: 0 0 0 8px;
+	font-size: 16px;
+	color: #000;
+	font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+}
+
+div#results_filters .form-choices {
+	padding-left: 15px;
+}
+
+div#filter_sort, div#filter_options {
+	border: 1px solid #CCC;
+	padding: 22px 0 20px 10px;
+}
+
+div#filter_options {
+	height: 359px;
+}
+
+input.form-submit {
+	display: none;
+}
+
+div#filter_options hr {
+	height: 0.2px;
+	color: #CCC;
+	margin: 17px 0 0 8px;
+}
+
+div#filter_options hr.filters_top {
+	width: 200px;
+}
+
+div#filter_options hr.filters_lang {
+	width: 78px;	
+}
+
+div#filter_options hr.filters_gend {
+	width: 215px;	
+}
+
+div#filter_options #expertise_form input {
+	background-color:transparent;
+	border:0 none;
+	cursor:pointer;
+	height:23px;
+	white-space:nowrap !important;
+	color: #063964;
+  text-decoration: none;
+}
+
+div#filter_options #expertise_form input:hover {
+  	text-decoration: underline;
+}
+
+div#filter_options div {
+	float: left;
+}
+
+div#filter_options div.heading {
+	padding-top: 7px;
+}
+
+div#filter_options #expertise_form, div#filter_options #insurance_form, div#filter_options #gender_form, div#filter_options #language_form {
+	float: left;
+	width: 305px;
+}
+
+div#filter_options #expertise_form {
+	padding: 5px 0 10px 14px;
+	color: #093B64;
+}
+
+div#filter_options #insurance_form {
+	padding: 9px 0 10px 19px;
+}
+
+div#filter_options #gender_form {
+	padding: 9px 0 10px 19px;
+}
+
+div#filter_options #language_form {
+	padding: 9px 0 10px 14px;
+}
+
+div#filter_options #expertise_form .filter-wrapper, div#filter_options .link_reset {
+	float: left;
+	clear: both;
+}
+
+div#filter_options .link_reset {
+	padding: 12px 0 0 8px; 
+}
+
+/* Doctor Bio */
+
+div.doctor_bio {
+	background: none;
+	background-color: #F1EFEE;
+}
+
+div.doctor_bio img.bio_photo {
+	float: left;
+	display: inline;
+}
+
+div.bio_wrapper {
+	width: 959px;
+	height: 620px;
+	background-color: #F1EFEE;
+	border: 1px solid #CCC;
+}
+
+/* Biosketch Pages */
+
+/* Tabs */
+
+div.content_container_tabs {
+	padding: 10px 0 0 0;
+	*padding: 0;
+}
+
+#biosketch_tabs {
+	display: block;
+	position: relative;
+	margin: 15px 0 0 0;
+	*margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#biosketch_tabs li {
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	border: 1px solid #CCC;
+	background-color: #E1E1E1;
+	z-index: 10;
+	zoom: 1;
+  *display: inline;
+}
+
+#biosketch_tabs.directions li {
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	border: 1px solid #CCC;
+	background-color: #E1E1E1;
+	z-index: 10;
+	zoom: 1;
+  *display: inline;
+}
+
+#biosketch_tabs a {
+	display: block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	color: #333;
+	text-decoration: none;
+}
+
+#biosketch_tabs li.selected {
+	background-color: #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+#biosketch_tabs .unselected { }
+#biosketch_data .unselected {display: none;}
+
+/* Tab Content */
+
+div#biosketch {
+	float: left;
+	display: inline;
+	width: 958px;
+	border: 1px solid #CCC;
+	background-color: #F0EFED;
+	padding: 20px 0 20px 17px;
+}
+
+div#biosketch img, div#biosketch div.biosketch_details, div#biosketch div.biosketch_contact {
+	float: left;
+	display: inline;
+	margin: 0 30px 0 0;
+}
+
+div#biosketch span {
+	display: block;
+}
+
+div#biosketch div.biosketch_details span.bio_crumb {
+	margin: 0 0 7px 0;
+	font-size: 16px;
+	font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+	color: #666;
+}
+
+div#biosketch div.biosketch_details h1 {
+	font-size: 35px;
+}
+
+div#biosketch div.biosketch_details span.doc_details, div#biosketch div.biosketch_contact address {
+	margin: 15px 0 10px 2px;
+	line-height: 18px;
+	font-style: normal;
+	color: #333;
+}
+
+div#biosketch_data {
+	width: 919px;
+	margin: -1px 0 0 0;
+	padding: 10px;
+	*padding-top: 22px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	z-index: 5;
+}
+
+div#biosketch_data a.bttn {
+	float: right;
+	display: inline;
+	margin: 10px 0 0 0;
+	*margin: 0;
+	font-weight: bold;
+}
+
+div#biosketch_data div.bio_data_wrapper {
+	margin: 60px 0 0 20px;	
+}
+
+div#biosketch_data div.bio_data_wrapper {
+	margin: 20px 0 0 20px;	
+}
+
+div#biosketch_data div.bio_data_left, div#biosketch_data div.bio_data_right {
+	float: left;
+	display: inline;
+	width: 360px;
+}
+
+div#biosketch_data div.bio_data_left.directions {
+	width: 450px;
+}
+
+div#biosketch_data div.bio_data_right.directions {
+	width: 375px;
+}
+
+div#biosketch_data div.bio_data_left {
+	margin-right: 75px;
+}
+
+div#biosketch_data div.bio_data_left.directions {
+	margin-right: 25px;
+}
+
+div#biosketch_data div.bio_data_right h3 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #006666;
+}
+
+div#biosketch_data div.bio_data_right.directions h3 {
+	margin: 0 0 10px 0;
+}
+
+div#biosketch_data div.bio_data_right.directions b {
+	color: #333;
+}
+
+div#biosketch_data div.bio_data_right span {
+	margin: 0 0 20px 0;
+}

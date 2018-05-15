@@ -1,0 +1,12 @@
+; $Id: views_ui_basic.info,v 1.1 2009/10/17 18:06:31 jonahellison Exp $
+name = Views UI: Edit Basic Settings
+description = Interface to edit basic Views settings, such as headers, footers, title, empty text, and items to display.
+package = Views
+core = 6.x
+dependencies[] = views
+; Information added by drupal.org packaging script on January 1, 1970 - 00:00
+version = "6.x-1.4"
+core = "6.x"
+project = "views_ui_basic"
+datestamp = "1296109595"
+

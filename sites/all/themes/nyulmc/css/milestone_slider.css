@@ -1,0 +1,120 @@
+
+/* Core Block */
+
+div#block-views-display_milestones-block_1 {
+ background-color: #EBEBEB;
+ width: 672px;
+ padding: 12px 0 0 0;
+}
+
+div#block-views-display_milestones-block_1 .wrapper {
+ clear: both;
+ overflow: hidden;
+ width: 672px;
+ padding: 0;
+}
+
+div#block-views-display_milestones-block_1 h2.title {
+ float:left;
+ padding: 0 0 0 12px;
+}
+
+div#block-views-display_milestones-block_1 .arrow,
+div#block-views-display_milestones-block_1 #thumbNav {
+  display: none;
+}
+
+div#block-views-display_milestones-block_1 .view-header {
+  text-align: right;
+  overflow: hidden;
+}
+
+/* Pagination Styles */
+
+div#block-views-display_milestones-block_1 a.pagination-prev, a.pagination-next {
+ display: inline-block;
+ width: 24px;
+ height: 20px;
+ text-indent: 9999em;
+ *margin-top: -20px;
+}
+
+div#block-views-display_milestones-block_1 a.pagination-prev {
+ background: url(../images_layout/buttons/pagination_arrows.png) left top no-repeat;
+ margin-right: 3px;
+}
+
+div#block-views-display_milestones-block_1 a.pagination-prev:hover {
+ background-position: 0 -20px;
+}
+
+div#block-views-display_milestones-block_1 a.pagination-next {
+ background: url(../images_layout/buttons/pagination_arrows.png) right top no-repeat;
+ margin-right: 15px;
+}
+
+div#block-views-display_milestones-block_1 a.pagination-next:hover {
+ background-position: right -20px;
+}
+
+div#block-views-display_milestones-block_1 .nav-holder a {
+ text-indent: 9999em;
+ display: inline-block;
+ width: 8px;
+ height: 8px;
+ background: #ccc;
+ vertical-align: middle;
+ margin: 0 4px;
+ border-radius: 4px;
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+}
+
+div#block-views-display_milestones-block_1 .nav-holder a.cur {
+ background: #666;
+}
+
+/* Block View Styles */
+
+.display-milestones {
+ list-style: none;
+ width: 10000%;
+ min-height: 414px;
+ height: auto !important;
+ height: 414px;
+ margin: 0 0 0 0 !important;
+ padding: 15px 0 5px 0 !important;
+ 
+ background-color: #EBEBEB;
+}
+
+.display-milestones h2 {
+ height: 23px;
+ padding: 3px 0 0 0;
+ text-align: center;
+ background-color: #3B2263;
+ font-size: 16px;
+ color: #FFF;
+}
+
+.display-milestones div.views-row {
+ float: left;
+ display: inline;
+ width: 220px;
+ min-height: 414px;
+ height: auto !important;
+ height: 414px;
+ margin: 0 6px 0 0;
+ background-color: #E4E4E4;
+}
+
+.display-milestones li.group-row-item {
+ list-style: none;
+ margin: 0;
+ float: left;
+ width: 672px;
+}
+
+.display-milestones div.display-milestones-body {
+  padding: 5px 10px;
+}

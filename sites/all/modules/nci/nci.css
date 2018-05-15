@@ -1,0 +1,23 @@
+body { background-color: white; }
+
+#term-id { margin-bottom: 15px; font-size: 11px; font-style: italic; }
+
+#term-semantic-type { margin-bottom: 10px; }
+
+#term-info h3, #term-info .term-label { font-weight: bold; }
+
+h2.summary-title { margin-bottom: 20px; }
+.summary-em { font-weight: bold; }
+
+#summary-info { margin-bottom: 15px; }
+
+#summary-index-list { text-align: center; }
+#summary-index-list a { padding: 0 10px; }
+
+div.summary-section { margin-bottom: 20px; }
+#summary-info h3 { font-weight: bold; }
+#summary-info h3.summary-section-title { margin-bottom: 20px;  }
+
+.glossary-name { font-weight: bold; }
+
+.media-caption { background: #dfdfdf; padding: 3px; margin-bottom: 15px; }

@@ -1,0 +1,12 @@
+; $Id: webform2pdf.info,v 1.1 2009/07/09 12:35:04 niif Exp $
+name = WebForm 2 PDF
+description = Generates PDF documents from the submitted webforms.
+core = 6.x
+dependencies[] = webform
+
+; Information added by drupal.org packaging script on 2010-10-29
+version = "6.x-1.2"
+core = "6.x"
+project = "webform2pdf"
+datestamp = "1288362948"
+

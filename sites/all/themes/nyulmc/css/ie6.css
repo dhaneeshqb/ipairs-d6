@@ -1,0 +1,38 @@
+div.display-sections {
+ margin-top: 0;
+}
+
+div.display-sections div.row-item {
+ margin-top: 0;
+}
+
+div#block-views-display_milestones-block_1 h2.title {
+ margin: 0;
+ padding: 0;
+}
+
+div#block-views-display_milestones-block_1 .wrapper {
+ width: 672px !important;
+}
+
+.display-milestones {
+ width: 672px;
+}
+
+.display-milestones li.group-row-item {
+ width: 672px;
+ clear: both;
+}
+
+div.leadership_detail div span {
+display:inline;
+}
+
+a.gray {background: url(../images_layout/buttons/bttn_g.png) left top no-repeat;}
+a.gray span {background: url(../images_layout/buttons/bttn_g.png) right top no-repeat;}
+a.gray:hover {background: url(../images_layout/buttons/bttn_g.png) left -28px no-repeat;}
+a.gray:hover span {background: url(../images_layout/buttons/bttn_g.png) right -28px no-repeat;}
+a.gray:active {background: url(../images_layout/buttons/bttn_g.png) left -56px no-repeat;}
+a.gray:active span {background: url(../images_layout/buttons/bttn_g.png) right -56px no-repeat;}
+
+.view-header { display: none; }

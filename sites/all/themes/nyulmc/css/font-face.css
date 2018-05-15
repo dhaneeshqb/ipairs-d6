@@ -1,0 +1,17 @@
+
+
+/* Define the fonts and link to the font-files on the server */
+@font-face {
+  font-family: SortsMillGoudy;
+  font-style:  normal;
+  font-weight: normal;
+	src: local('OFL Sorts Mill Goudy TT'),  url(../fonts/SortsMillGoudy.ttf);
+	src: url(../fonts/SortsMillGoudy.ttf);
+}
+@font-face {
+  font-family: SortsMillGoudy;
+  font-style:  italic;
+  font-weight: normal;
+	src: local('OFL Sorts Mill Goudy TT'),  url(../fonts/SortsMillGoudy_italic.ttf);
+	src: url(../fonts/SortsMillGoudy_italic.ttf);
+}

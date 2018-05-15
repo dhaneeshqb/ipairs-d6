@@ -1,0 +1,26 @@
+;$Id: nyulmc.info, v 1.0 2010/7/21 7:00:00 karenann Exp $
+name = NYULMC Main Theme
+description = Theme for NYU Langone Medical Center's main website.
+core = 6.x
+engine = phptemplate
+
+; Style Sheets
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/nav.css
+stylesheets[all][] = css/custom.css
+stylesheets[all][] = css/font-face.css
+stylesheets[print][] = css/print.css
+
+; Regions
+regions[head_content] = Head content
+regions[column_left] = Left side column
+regions[content] = Content
+regions[content_blocks] = Content Blocks
+regions[column_right] = Right side column
+regions[column_feature] = Feature column
+regions[column_sidebar] = Sidebar column
+
+; Scripts
+scripts[] = js/misc.js
+scripts[] = js/jquery.hoverIntent.js

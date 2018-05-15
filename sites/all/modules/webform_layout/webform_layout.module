@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * This module provides a layout container for webforms.
+ *
+ * @author Gergely Szász <szaszg@hu.inter.net>
+ */
+
+/**
+ * Implements hook_help().
+ */
+function webform_layout_help($section = 'admin/help#webform_layout', $arg = NULL) {
+  switch ($section) {
+    case 'admin/help#webform_layout':
+      // Return a line-break version of the module README.txt
+      return nl2br(file_get_contents(drupal_get_path('module', 'webform_layout') . '/README.txt'));
+  }
+  return '';
+}
+
+/**
+ * Implements hook_webform_component_info().
+ */
+function webform_layout_webform_component_info() {
+  return array(
+    'layout_box' => array(
+      'label' => t('Layout Box'),
+      'description' => t('Allows you to arrange fields into rows and columns.'),
+      'features' => array(
+        'csv' => FALSE,
+        'required' => FALSE,
+        'conditional' => FALSE,
+        'group' => TRUE,
+        'title_display' => FALSE,
+      ),
+      'file' => 'layout_box.inc',
+    ),
+  );
+}

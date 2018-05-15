@@ -1,0 +1,18 @@
+Date Repeat Node Generator 6.x
+
+6.x-2.x-dev
+===========
+
+Bugfixes:
+- #1331490 by vgriffin: Save a copy of $node before the first 
+call to node_submit. Use that to initialize new nodes so path and 
+other fields will initialize to unset values. Use standard node-
+handling calls. Clean up url_alias in version update. Supercedes 
+patch.
+- #601456  by vgriffin: Call node_submit and node_save for first 
+and subsequent node. Replaces patch.
+- #438108  by vgriffin: Initialize each node to values before 
+node_submit or node_save. This unsets values used by any standard 
+field-creating module.
+- Remove sequence members from internal table upon node deletion. 
+Remove sequence definitions when all members are deleted.

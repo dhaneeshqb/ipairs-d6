@@ -1,0 +1,119 @@
+<?php
+
+/**
+ * Implementation of hook_install().
+ */
+function date_repeat_nodegen_install() {
+  drupal_install_schema('date_repeat_nodegen');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function date_repeat_nodegen_uninstall() {
+  db_query("DELETE FROM {variable} WHERE name LIKE '%s_%%'", 'date_repeat_nodegen');
+  cache_clear_all('variables', 'cache');
+  // Delete tables.
+  drupal_uninstall_schema('date_repeat_nodegen');
+}
+
+
+/**
+ * Implementation of hook_schema().
+ */
+function date_repeat_nodegen_schema() {
+  $schema['date_repeat_nodegen_sequence'] = array(
+    'description' => t('Descriptions of generated node sequences'),
+    'fields' => array(
+      'seqid' => array(
+        'description' => t('Unique identifier for sequence'),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'rrule' => array(
+        'description' => t('Date repeat rule for sequence'),
+        'type' => 'text',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('seqid'),
+  );
+  $schema['date_repeat_nodegen_sequence_member'] = array(
+    'description' => t('Nodes associated with sequences'),
+    'fields' => array(
+      'seqid' => array(
+        'description' => t('Sequence identifier in date_repeat_nodegen_sequence'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'description' => t('Node identifier'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('seqid', 'nid'),
+  );
+  return $schema;
+}
+
+/**
+ * Starting with dev 6.2.x, this module uses the schema hook,
+ * cleans up after deletes and correctly handles pathauto (url_alias) values.
+ * This update cleans up after previous deletes and repairs path values.
+ */
+function date_repeat_nodegen_update_6200() {
+  $ret = array();
+  
+  // remove references to nodes that no longer exist
+  // remove definitions of empty sequences
+  db_query("DELETE FROM {date_repeat_nodegen_sequence_member} " .
+           "WHERE nid NOT IN (SELECT nid FROM {node})");
+  db_query("DELETE FROM {date_repeat_nodegen_sequence} " .
+           "WHERE seqid NOT IN (SELECT seqid FROM {date_repeat_nodegen_sequence_member})");
+  
+  // if pathauto was set, alias values were not created correctly.
+  // delete all duplicate entries and force them to be rebuilt
+  // regenerate others not marked to be set explicitly, saving them if they changed
+  // note that non-automatic entries are not marked in the table. Therefore, it it
+  // impossible for the code to differentiate between correct explicitly-specified
+  // values and incorrect automatic values. Because of the known error in processing
+  // or pathauto values and the fact that is makes more sense for nodes created as
+  // a sequence to use an automatic path, nodes with alias values that do not correspond to
+  // the current automatic value are changed.
+  
+  // if a generated node can have multiple links, each with a different language,
+  // all nodes are recomputed using the current alias. (I don't know if this is a real
+  // concern, but it's worth mentioning as it has not been tested.)
+  
+  if (module_exists('pathauto')) {
+    // make sure we can get to all tokens, including times stored in CCK content
+    module_load_all();
+    module_load_all_includes('inc');
+    module_invoke_all('init');
+    
+    // look at all nodes created by this module
+    $result = db_query(db_rewrite_sql("SELECT nid FROM {date_repeat_nodegen_sequence_member}"));
+    while ($data = db_fetch_array($result)) {
+      $nid = $data['nid'];
+      $node = node_load($nid, NULL, TRUE);
+      $sql = "SELECT COUNT(*) FROM {url_alias} WHERE src = \"node/" . $nid . "\"";
+      $number = db_result(db_query($sql));
+      if ($number > 1) {
+        $sql = "DELETE FROM {url_alias} WHERE src = \"node/" . $nid . "\"";
+        db_query($sql);
+        unset($node->pathauto_perform_alias);
+      }
+      if (!isset($node->pathauto_perform_alias) || !empty($node->pathauto_perform_alias)) {
+        $node = node_submit($node);
+        node_save($node);
+      }
+    }
+  }
+  
+  $ret[] = array('success' => TRUE, 'query' => 'Updated sequences to remove deleted nodes.');
+  return $ret;
+}

@@ -1,0 +1,15 @@
+
+
+/* Define the fonts and link to the font-files on the server - special EOT format for IE */
+@font-face {
+  font-family: SortsMillGoudy;
+  font-style:  normal;
+  font-weight: normal;
+	src: url(../fonts/SortsMillGoudy.eot);
+}
+@font-face {
+  font-family: SortsMillGoudy;
+  font-style:  italic;
+  font-weight: normal;
+	src: url(../fonts/SortsMillGoudy_italic.eot);
+}

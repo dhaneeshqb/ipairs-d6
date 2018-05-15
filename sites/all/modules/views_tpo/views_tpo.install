@@ -1,0 +1,9 @@
+<?php
+// $Id: views_tpo.install,v 1.1 2010/05/07 23:57:19 plach Exp $
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function views_tpo_uninstall() {
+  variable_del('views_term_path_override');
+}

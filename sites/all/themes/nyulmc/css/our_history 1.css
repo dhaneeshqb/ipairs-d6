@@ -1,0 +1,116 @@
+#content div#content_blocks div#block-views-display_milestones-block_1 {
+	background-color: #EBEBEB;
+  width: 672px;
+  padding: 16px 0;
+}
+#content div#content_blocks div#block-views-display_milestones-block_1 .wrapper {
+  clear: both;
+  overflow: hidden;
+  width: 672px;
+  padding: 0;
+}
+#content div#content_blocks div#block-views-display_milestones-block_1 h2.title {
+float:left;
+padding: 0 0 0 12px;
+}
+
+#content div#content_blocks div#block-views-display_milestones-block_1 .arrow,
+#content div#content_blocks div#block-views-display_milestones-block_1 #thumbNav {
+  display: none;
+}
+#content div#content_blocks div#block-views-display_milestones-block_1 .view-header {
+  text-align: right;
+  overflow: hidden;
+}
+
+.display-milestones {
+  list-style: none;
+  width: 10000%;
+  overflow: auto;
+	min-height: 414px;
+	height: auto !important;
+	height: 414px;
+	margin: 0 0 0 0;
+	padding: 15px 0 5px 0;
+	background-color: #EBEBEB;
+}
+
+.display-milestones h2 {
+/*	display: inline;
+	margin: 0 0 0 10px;*/
+	height: 23px;
+	padding: 3px 0 0 0;
+	text-align: center;
+	background-color: #3B2263;
+	font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+	font-size: 16px;
+	color: #FFF;
+}
+
+
+a.pagination-prev, a.pagination-next {
+	display: inline-block;
+	width: 24px;
+	height: 20px;
+	text-indent: 9999em;
+	*margin-top: -20px;
+}
+
+a.pagination-prev {background: url(../images_layout/buttons/pagination_arrows.png) left top no-repeat; margin-right: 3px; }
+a.pagination-prev:hover {background-position: 0 -20px;}
+a.pagination-next {background: url(../images_layout/buttons/pagination_arrows.png) right top no-repeat; margin-right: 15px;}
+a.pagination-next:hover {background-position: right -20px;}
+
+.nav-holder a {
+  text-indent: 9999em;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  vertical-align: middle;
+  margin: 0 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.nav-holder a.cur {
+  background: #666;
+}
+
+.display-milestones {
+/*	list-style: none;
+	margin: 20px 0 0 0;*/
+}
+
+.display-milestones .group-row-item {
+  list-style: none;
+  margin: 0;
+  float: left;
+  width: 672px;
+}
+
+.display-milestones div.row-item {
+	float: left;
+	display: inline;
+	width: 220px;
+	min-height: 414px;
+	height: auto !important;
+	height: 414px;
+	margin: 0 6px 0 0;
+	background-color: #E4E4E4;
+}
+
+.display-milestones div.row-item span {
+	display: block;
+}
+
+.display-milestones div.row-item span.display-milestones-field-timeline-year-value {
+}
+
+.display-milestones div.row-item span.description {
+	padding: 20px;
+}
+
+.display-milestones div.row-item p {
+  padding: 5px 10px;
+}

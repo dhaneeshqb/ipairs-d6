@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Just a tiny module.  For any exposed filters, add a "Reset" button.  Simple HTML reset.
+ */
+
+function resetfilter_form_alter(&$form, $form_state, $form_id) {
+    if ($form_id == 'views_exposed_form') {
+    $current_display = $form_state['view']->current_display;
+    $form['reset'] = array(
+      '#type' => 'markup',
+      '#value' => '<input type="reset" value="Reset" />',
+     );
+  }
+}

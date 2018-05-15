@@ -1,0 +1,13 @@
+; $Id: $
+name = Loisform
+description = Enables the creation of forms and questionnaires.
+core = 6.x
+package = Loisform
+php = 5.0
+
+; Information added by drupal.org packaging script on 2010-10-20
+version = "6.x-3.4"
+core = "6.x"
+project = "loisform"
+datestamp = "1287598574"
+

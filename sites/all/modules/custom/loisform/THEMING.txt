@@ -1,0 +1,116 @@
+Overview
+--------
+Loisform supports theming similar to the CCK or Views modules. Any loisform
+may be themed on the server side, though doing so may require a reasonable
+amount of knowledge about the Drupal Form API. More information about the Form
+API may be found at http://api.drupal.org/api/file/developer/topics/forms_api.html
+
+Theme submission e-mails
+-----------------------
+The default e-mails sent by loisform are fairly basic. If you like, you may
+customize the display of e-mails sent by each individual loisform.
+
+- Open the Loisform module directory.
+
+- Copy (do not move!) the "loisform-mail.tpl.php" file to your theme directory.
+
+- Open up the new file and edit it to your liking. The loisform-mail.tpl.php file
+  contains further instructions on how to get started with theming the e-mail.
+
+- If you want to edit the e-mail sent by only one particular loisform, rename the
+  file "loisform-mail-[node id here].tpl.php", replacing [node id here] with the
+  node ID of the loisform.
+
+- Clear the theme cache! Visit admin/settings/performance and click the
+  "Clear cached data" button at the bottom of the page. You may also find
+  using devel module will speed up this process a bit. This needs to be done
+  every time you create or rename a .tpl.php file, but isn't necessary once
+  these files already exist.
+
+- To get a better idea of what variables are available to you, you can include
+  the print_r function in your email. Simply include the line:
+
+  <?php print_r($submission) ?>
+
+  to get a listing of all the available fields you can use in your mail.
+
+- Advanced Loisform e-mail Theming: Theming the e-mail headers may also be done
+  by overriding the theme_loisform_mail_headers() function from loisform.module.
+  Just copy the code out of loisform.module and change as necessary in your
+  template.php file. This allows you to customize the e-mail headers.
+
+Theme the confirmation page
+---------------------------
+
+After a user submits a loisform, they are directed to a page that contains the
+confirmation message set in the loisform node settings (assuming the form doesn't
+direct to a complete URL). These instructions let you customize the format of
+the confirmation page of a single node or all loisforms on your site.
+
+- Open the Loisform module directory.
+
+- Copy (do not move!) the "loisform-confirmation.tpl.php" file to your theme
+  directory.
+
+- Open the new file and change it's contents to the your liking. Here's an
+  example that inserts some additional HTML around the confirmation message and
+  gives links to edit the submission.
+
+  <?php /* Begin sample loisform confirmation page */ ?>
+
+  <div class="confirmation-message">
+    <?php print $confirmation_message ?>
+  </div>
+
+  <ul>
+    <li><a href="<?php print url('node/'. $node->nid . '/submission/'. $sid)?>">View your submission</a></li>
+    <li><a href="<?php print url('node/'. $node->nid . '/submission/'. $sid .'/edit')?>">Edit your submission</a></li>
+  </ul>
+  
+  <?php /* End sample loisform confirmation page */ ?>
+
+- You may edit the loisform-confirmation.tpl.php file in your theme directory,
+  this will affect all the loisform mails sent by your entire site. Or, if you
+  want to edit the e-mail sent by only one particular loisform, rename the file
+  "loisform-confirmation-[node id here].tpl.php", replacing [node id here] with
+  the node ID of the loisform.
+
+- Visit admin/settings/performance and click the "Clear cached data" button.
+
+Theme display of an entire loisform
+----------------------------------
+
+Theming a loisform can be useful for rearranging elements or customizing the
+appearance of multiple components at once. This tutorial assumes usage
+of the phptemplate engine.
+
+- Copy the "loisform-form.tpl.php" file from the loisform directory to your
+  theme directory. You may rename this file
+  "loisform-form-[node id here].tpl.php" if you want to theme one particular
+  loisform on your site. Replace [node id here] with the node ID of the loisform.
+
+- Open up your new file and customize the loisform however you like.
+
+- Visit admin/settings/performance and click the "Clear cached data" button.
+
+- All Loisform forms have 2 main fieldsets: "submitted", and "details". Although
+  you may move things around as you wish, keep all your components within the
+  "submitted" fieldset. Only the "submitted" fieldset is displayed and Loisform
+  depends on the other two to operate properly, so don't mess with them unless
+  you have good reason to do so (like you're forwarding your loisform to a custom
+  PHP or PERL script).
+
+Theme display of a loisform submission display
+---------------------------------------------
+
+Theming the display of a loisform submission works the same way as theming a
+loisform form. Loisform uses Drupal "renderable" style arrays for the display of
+submissions, just like most forms in Drupal.
+
+The template file for theming submissions is loisform-submission.tpl.php. You can
+use loisform-submission-[node id here].tpl.php for individual nodes if desired.
+Note that the contents of this template are used not only for display of
+submissions in the Loisform interface but also in e-mails when printing out
+the %email_values token.
+
+$Id: THEMING.txt,v 1.12.2.1 2010/08/30 17:01:54 quicksketch Exp $

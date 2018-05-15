@@ -1,0 +1,11 @@
+name = Node Reminder
+description = Add a notification to a node.
+core = 6.x
+dependencies[] = 'token'
+
+; Information added by drupal.org packaging script on 2012-01-11
+version = "6.x-1.5"
+core = "6.x"
+project = "node_reminder"
+datestamp = "1326258644"
+

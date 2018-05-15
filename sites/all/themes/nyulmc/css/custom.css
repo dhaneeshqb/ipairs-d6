@@ -1,0 +1,106 @@
+/* Intended for use for styles that'll be used in the body area. */
+
+ul.plain-list {
+ list-style: none inside none !important;
+}
+
+/* Hospital List */
+
+ul#hospital_list {
+ list-style: none;
+ margin: 20px 0 !important;
+ padding: 0 !important;
+}
+
+ul#hospital_list li {
+ margin: 0;
+ border-bottom: 1px solid #CCC;
+}
+
+ul#hospital_list li div {
+ margin: 5px 0;
+ padding: 10px 5px;
+ background: #EBEBEB url(../images_layout/nyu_logo_sm.jpg) 10px 10px no-repeat;
+}
+
+ul#hospital_list li div a {
+ float: left;
+ display: inline;
+ width: 150px;
+ padding: 0 0 0 45px;
+ line-height: 33px;
+ font-family: SortsMillGoudy, Georgia, "Times New Roman", Times, Serif;
+ color: #333;
+}
+
+ul#hospital_list li div a.two-line {
+ line-height: normal;
+}
+
+ul#hospital_list li div span {
+ float: right;
+ display: inline;
+ width: 400px;
+}
+
+ul#hospital_list li.last {
+ border: none;
+}
+
+/* Affiliated List */
+
+ul#affiliated_list {
+ list-style: none;
+ margin: 20px 0 0 0;
+}
+
+ul#affiliated_list li {
+ margin: 0 0 20px 0;
+}
+
+ul#affiliated_list li a {
+ display: block;
+ font-weight: bold;
+}
+
+/* Medical Center Leadership List */
+
+ul#leadership_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul#leadership_list li {
+	margin: 0 0 12px 0;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+}
+
+ul#leadership_list li h2 a {
+	color: #67429B;
+}
+
+ul#leadership_list li p {
+	margin: 0 0 12px 0;
+}
+
+
+ul#leadership_list li.last {
+	border-bottom: 0;
+}
+
+/* Misc Styles */
+
+.img_left {
+ float: left;
+ padding-right:10px;
+ padding-bottom:10px;
+}
+
+
+.img_right {
+ float: right;
+ padding-left:10px;
+ padding-bottom:10px;
+}

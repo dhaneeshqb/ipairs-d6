@@ -1,0 +1,188 @@
+div#homepage-feature {
+ width: auto;
+ min-height: 406px;
+ margin: 0;
+}
+
+div#homepage-feature .slider {
+ width: 972px;
+ height: 406px;
+ margin: 0 auto;
+}
+
+div#homepage-feature .slider-wrapper {
+ width: 864px;
+ height: auto;
+ margin: 0 54px;
+}
+
+div#homepage-feature .slider ul {
+ position: relative;
+ width: 864px;
+ height: 406px;
+ overflow: hidden;
+ border: none;
+ background: none;
+}
+
+div#homepage-feature .slider ul li {
+ width: 864px;
+ height: 406px;
+ float: none;
+ position: absolute;
+ display: none; /* see home_slider.js - it enables the first slide programatically */
+}
+
+div#homepage-feature .slider ul li img {
+ margin: 0 auto;
+ display: block;
+}
+
+div#homepage-feature #start-stop {
+ display: none;
+}
+
+div#homepage-feature .cloned {
+ display: none;
+}
+
+div#homepage-feature #thumbNav {
+ position: absolute;
+ top: auto;
+ bottom: 20px;
+ right: 20px;
+ text-align: right;
+ z-index: 2;
+}
+
+div#homepage-feature #thumbNav a {
+ width: 8px;
+ height: 8px;
+ font-size: 0px;
+ line-height: 0px;
+ text-indent: -999em;
+ -moz-border-radius: 0 !important;
+ -webkit-border-radius: 0 !important;
+ border-radius: 0 !important;
+ background: transparent url(../images_layout/home_slider/bullet.png);
+ padding: 0;
+}
+
+div#homepage-feature #thumbNav a.cur {
+ background: white;
+}
+
+div#homepage-feature .arrow {
+ width: 54px;
+ background-image: url(../images_layout/home_slider/home_arrows.gif);
+}
+ 
+/**
+ * Imported, in part, from jquery_anythingslider_v1.2.css
+**/
+ 
+.slider { 
+ /* width: 760px; height: 360px; margin: 0 auto 15px; */
+ position: relative;
+ }
+ 
+.slider .slider-wrapper {
+ /* width: 680px; height: 341px; overflow: auto; margin: 0 40px; */
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.slider .slider-wrapper ul {
+ /* Width is max for Opera */
+ /* width: 32700px; background: #eee; position: absolute; */
+ list-style: none;
+ top: 0;
+ left: 0;
+ border-top: 3px solid #e0a213;
+ border-bottom: 3px solid #e0a213;
+ margin: 0;
+}
+
+.slider ul li {
+ /* display: block; float: left; height: 317px; width: 680px; */
+ padding: 0;
+ margin: 0;
+}
+
+.slider .arrow {
+ /* width: 67px; */
+ display: block;
+ height: 200px;
+ background: url(../images_layout/home_slider/arrows.png) no-repeat 0 0;
+ text-indent: -9999px;
+ position: absolute;
+ top: 100px;
+ cursor: pointer;
+}
+
+.slider .forward {
+ background-position: 0 0;
+ right: 0; /*-20px;*/
+}
+
+.slider .back { 
+ background-position: -80px 0; /*-67px 0;*/
+ left: 0;/*-20px;*/
+}
+
+.slider .forward:hover {
+ background-position: 0 -200px;
+}
+
+.slider .back:hover {
+ background-position: -80px -200px;
+}
+
+.slider #thumbNav {
+ /* position: relative; top: 323px; text-align: center; */
+}
+
+.slider #thumbNav a {
+ /* background: #c58b04 url(cellshade.png) repeat-x; padding: 2px 8px; height: 18px; */
+ color: black;
+ font: 11px/18px Georgia, Serif;
+ display: block;
+ float: left;
+ margin: 0 5px 0 0;
+  text-align: center;
+ -moz-border-radius-bottomleft: 5px;
+ -moz-border-radius-bottomright: 5px;
+ -webkit-border-bottom-right-radius: 5px;
+ -webkit-border-bottom-left-radius: 5px;
+}
+
+.slider #thumbNav a:hover {
+ background-image: none;
+}
+
+.slider #thumbNav a.cur {
+ /* background: #e0a213; */
+}
+
+.slider #start-stop {
+ display: none;
+}
+
+/* Prevents */
+
+.slider .slider-wrapper ul ul {
+ position: static;
+ margin: 0;
+ background: none;
+ overflow: visible;
+ width: auto;
+ border: 0;
+}
+
+.slider .slider-wrapper ul ul li {
+ float: none;
+ height: auto;
+ width: auto;
+ background: none;
+}

@@ -1,0 +1,9 @@
+<?php
+
+function customlogo_install() {
+	// Use schema API to create database table.
+}
+
+function customlogo_uninstall() {
+	// Use schema API to destroy database table.
+}
